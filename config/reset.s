@@ -97,9 +97,9 @@ MusicInit:			;turns music channels off
    
    
 ;init sfx
-	ldx #<sounds			;set sound effects data location
-	ldy #>sounds
-	jsr FamiToneSfxInit
+;	ldx #<sounds			;set sound effects data location
+;	ldy #>sounds
+;	jsr FamiToneSfxInit
 	
 	jsr	copydata
 	jsr	initlib
