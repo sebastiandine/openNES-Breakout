@@ -12,6 +12,22 @@
  */
 unsigned char flag_ingame;
 
+/**
+ * coordinates of paddle.
+ * @{
+ */
+unsigned char paddle_x;
+unsigned char paddle_y;
+/**
+ * @}
+ */
+
+/**
+ * @brief this variable indicates wheter the game is pause or not.
+ * 0 indicates , that the games is not paused, 1, that the game is paused.
+ */
+unsigned char flag_pause;
+
 #pragma bss-name(pop)
 
 /**

@@ -1,0 +1,4 @@
+<map id="render_paddle" name="render_paddle">
+<area shape="rect" id="node2" href="$render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="This function orchestrates all rendering functions and encapsulates them to the main loop..." alt="" coords="156,5,273,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="321,5,372,32"/>
+</map>

@@ -5,6 +5,8 @@
 #include "nes_hw_functionalities.c"
 
 #include "globals.h"
+#include "input.c"
+#include "render.c"
 
 #include "menu.h"
 #include "ingame.h"
@@ -36,11 +38,22 @@ void main(void){
             }
         }
 
+        /* --- INIT INGAME VARIABLES --- */
+        paddle_x = 125;
+        paddle_y = 220;
+        flag_pause = 0;
+
+
         ppu_turn_all_off();
         ppu_draw_background(ingame, 'a');
         wait_Vblank();
         ppu_turn_all_on();
-        while(1);
+        while(1){
+            gamepad1_input_handling();
+
+            wait_until_nmi();
+            mainloop_render();
+        }
 
     }
 
