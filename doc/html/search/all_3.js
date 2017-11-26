@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['flag_5fingame',['flag_ingame',['../globals_8h.html#a4d1f02bb27f450e827b6629243dfb53b',1,'globals.h']]],
-  ['flag_5fpause',['flag_pause',['../globals_8h.html#a55ee706f6d79bc818cb968bea99ae1b2',1,'globals.h']]],
-  ['frm_5fcount',['frm_count',['../nes__hw__functionalities_8h.html#a3cf8c20a6e3ae7b8754fc251433d8950',1,'nes_hw_functionalities.h']]]
+  ['dir',['dir',['../structball__struct.html#a8ca0a06c10e2264fc7e7054c97a75ff4',1,'ball_struct']]],
+  ['dir_5fdown',['DIR_DOWN',['../nes__hw__functionalities_8h.html#a90214d45dd9a40f97bbe24079f40218d',1,'nes_hw_functionalities.h']]],
+  ['dir_5fleft',['DIR_LEFT',['../nes__hw__functionalities_8h.html#a788d3497514ea05602fd974d7bdcdbde',1,'nes_hw_functionalities.h']]],
+  ['dir_5fright',['DIR_RIGHT',['../nes__hw__functionalities_8h.html#a85ae9767b23edf40871541d23962784b',1,'nes_hw_functionalities.h']]],
+  ['dir_5fup',['DIR_UP',['../nes__hw__functionalities_8h.html#a480d28eba00f028b351fb2f3312f5409',1,'nes_hw_functionalities.h']]],
+  ['down',['DOWN',['../structures_8h.html#ae465566298bc6a2c71a6eed4afb8171fa9b0b4a95b99523966e0e34ffdadac9da',1,'structures.h']]]
 ];

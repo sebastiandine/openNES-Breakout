@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sprite_5fpalette',['sprite_palette',['../globals_8h.html#af23796a848cd6907595256509d429963',1,'globals.h']]]
+  ['lives',['lives',['../structplayer__struct.html#a8d8c91775e55f076beec4f598db3ae1e',1,'player_struct']]]
 ];

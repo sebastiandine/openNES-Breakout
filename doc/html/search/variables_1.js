@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['flag_5fingame',['flag_ingame',['../globals_8h.html#a4d1f02bb27f450e827b6629243dfb53b',1,'globals.h']]],
-  ['flag_5fpause',['flag_pause',['../globals_8h.html#a55ee706f6d79bc818cb968bea99ae1b2',1,'globals.h']]],
-  ['frm_5fcount',['frm_count',['../nes__hw__functionalities_8h.html#a3cf8c20a6e3ae7b8754fc251433d8950',1,'nes_hw_functionalities.h']]]
+  ['ball',['ball',['../globals_8h.html#a291d97ea77fd59e8f52b954ca4a6357f',1,'globals.h']]],
+  ['bg_5fcollision_5fmap',['bg_collision_map',['../nes__hw__functionalities_8h.html#a8676935a08a5d7cf2cecc8d806b29b6e',1,'nes_hw_functionalities.h']]],
+  ['bg_5fpalette',['bg_palette',['../globals_8h.html#a73def7377b35d00806993d5fab31fe42',1,'globals.h']]]
 ];

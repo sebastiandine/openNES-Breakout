@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['oam_5faddress',['OAM_ADDRESS',['../nes__hw__functionalities_8h.html#a41b76850e35dd59084c7178a13a6b63c',1,'nes_hw_functionalities.h']]],
-  ['oam_5fdma',['OAM_DMA',['../nes__hw__functionalities_8h.html#a534a73247b402d09c7eb82e512ade27d',1,'nes_hw_functionalities.h']]],
-  ['oam_5foffset',['oam_offset',['../nes__hw__functionalities_8h.html#af991639de0a899b83418865d449fdb9e',1,'nes_hw_functionalities.h']]]
+  ['left',['LEFT',['../structures_8h.html#ace937d1c5584c13ffd4a13ffeb77c810adb45120aafd37a973140edee24708065',1,'structures.h']]],
+  ['lives',['lives',['../structplayer__struct.html#a8d8c91775e55f076beec4f598db3ae1e',1,'player_struct']]],
+  ['load_5fbackground_5fcollision_5fmap',['load_background_collision_map',['../nes__hw__functionalities_8c.html#a3b0640509d7e01bf4f82a8473fbbe139',1,'load_background_collision_map(unsigned char *col_map):&#160;nes_hw_functionalities.c'],['../nes__hw__functionalities_8h.html#a3b0640509d7e01bf4f82a8473fbbe139',1,'load_background_collision_map(unsigned char *col_map):&#160;nes_hw_functionalities.c']]],
+  ['lsb',['LSB',['../nes__hw__functionalities_8h.html#a34a3aa6cbadec6a80ab1eae8efd0083d',1,'nes_hw_functionalities.h']]]
 ];

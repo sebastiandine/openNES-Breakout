@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['bg_5fcollision_5fmap',['bg_collision_map',['../nes__hw__functionalities_8h.html#a8676935a08a5d7cf2cecc8d806b29b6e',1,'nes_hw_functionalities.h']]],
-  ['bg_5fpalette',['bg_palette',['../globals_8h.html#a73def7377b35d00806993d5fab31fe42',1,'globals.h']]]
+  ['angle',['angle',['../structball__struct.html#ad2886fb42fc8b4545d8ec4b70a97066f',1,'ball_struct']]],
+  ['angle_5fdir',['angle_dir',['../structball__struct.html#a29059b1b377c2ac434df5eb712e1f9bd',1,'ball_struct']]]
 ];

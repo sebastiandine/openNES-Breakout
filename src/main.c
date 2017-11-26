@@ -4,8 +4,10 @@
 #include "nes_hw_functionalities.h"
 #include "nes_hw_functionalities.c"
 
+#include "structures.h"
 #include "globals.h"
 #include "input.c"
+#include "update.c"
 #include "render.c"
 
 #include "menu.h"
@@ -39,20 +41,42 @@ void main(void){
         }
 
         /* --- INIT INGAME VARIABLES --- */
-        paddle_x = 125;
-        paddle_y = 220;
         flag_pause = 0;
 
+        /* init playfield */
+        playfield.edge_top = 32;
+        playfield.edge_bottom = 200;
+        playfield.edge_left = 5;
+        playfield.edge_right = 242;
 
-        ppu_turn_all_off();
-        ppu_draw_background(ingame, 'a');
-        wait_Vblank();
-        ppu_turn_all_on();
-        while(1){
-            gamepad1_input_handling();
+        /* init player */
+        player.pos_x = 125;
+        player.score = 0;
+        player.lives = 4;
+        player.speed = 4;
 
-            wait_until_nmi();
-            mainloop_render();
+        while(1) {
+            /* init ball */
+            ball.pos_x = 135;
+            ball.pos_y = 180;
+            ball.speed = 1;
+            ball.dir = UP;
+            ball.angle_dir = LEFT;
+            ball.angle = MID;
+
+            flag_miss = 0;
+
+            ppu_turn_all_off();
+            ppu_draw_background(ingame, 'a');
+            wait_Vblank();
+            ppu_turn_all_on();
+
+            while (!flag_miss) {
+                gamepad1_input_handling();
+                mainloop_update();
+                wait_until_nmi();
+                mainloop_render();
+            }
         }
 
     }

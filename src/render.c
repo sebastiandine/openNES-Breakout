@@ -7,6 +7,7 @@
 /**
 * @brief Sprite constants
 */
+#define SPR_BALL 0x01
 #define SPR_PADDLE_MID  0x02
 #define SPR_PADDLE_EDGE 0x03
 
@@ -15,9 +16,16 @@
  */
 void render_paddle(void){
 
-    oam_offset = ppu_load_sprite_to_oam(paddle_x, paddle_y, SPR_PADDLE_EDGE, SPRITE_ATTR(0,0,0,0), oam_offset);
-    oam_offset = ppu_load_sprite_to_oam(paddle_x+8, paddle_y, SPR_PADDLE_MID, SPRITE_ATTR(0,0,0,0), oam_offset);
-    oam_offset = ppu_load_sprite_to_oam(paddle_x+16, paddle_y, SPR_PADDLE_EDGE, SPRITE_ATTR(0,1,0,0), oam_offset);
+    oam_offset = ppu_load_sprite_to_oam(player.pos_x, playfield.edge_bottom, SPR_PADDLE_EDGE, SPRITE_ATTR(0,0,0,0),
+                                        oam_offset);
+    oam_offset = ppu_load_sprite_to_oam(player.pos_x+8, playfield.edge_bottom, SPR_PADDLE_MID, SPRITE_ATTR(0,0,0,0),
+                                        oam_offset);
+    oam_offset = ppu_load_sprite_to_oam(player.pos_x+16, playfield.edge_bottom, SPR_PADDLE_EDGE, SPRITE_ATTR(0,1,0,0),
+                                        oam_offset);
+}
+
+void render_ball(void){
+    oam_offset = ppu_load_sprite_to_oam(ball.pos_x, ball.pos_y, SPR_BALL, SPRITE_ATTR(0,0,0,0), oam_offset);
 }
 
 /**
@@ -33,4 +41,5 @@ void mainloop_render(void){
 
     oam_offset = 0;   /* make sure to set oam_offset to 0 before you render sprites */
     render_paddle();
+    render_ball();
 }

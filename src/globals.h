@@ -13,20 +13,31 @@
 unsigned char flag_ingame;
 
 /**
- * coordinates of paddle.
- * @{
- */
-unsigned char paddle_x;
-unsigned char paddle_y;
-/**
- * @}
- */
-
-/**
- * @brief this variable indicates wheter the game is pause or not.
- * 0 indicates , that the games is not paused, 1, that the game is paused.
+ * @brief This variable indicates whether the game is pause or not.
+ * 0 indicates, that the games is not paused, 1, that the game is paused.
  */
 unsigned char flag_pause;
+
+/**
+ * @brief  This variable indicates, if the player missed the ball and therefore
+ * loses one live.
+ */
+unsigned char flag_miss;
+
+/**
+ * @brief This variable represents the games ball with its parameters.
+ */
+static struct ball_struct ball;
+
+/**
+ * @brief This variable represents the volume of the playfield.
+ */
+static struct playfield_struct playfield;
+
+/**
+ * @brief This variable represents the player.
+ */
+static struct player_struct player;
 
 #pragma bss-name(pop)
 

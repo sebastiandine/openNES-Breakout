@@ -20,13 +20,15 @@ void gamepad1_input_handling(void) {
 
     if (!flag_pause) {                             /* make sure that position cannot be changed during pause */
         if (gamepad_1 & DIR_LEFT) {
-            if (paddle_x > 10) {
-                paddle_x -= 2;
+            if ((player.pos_x - player.speed) > playfield.edge_left) {  /* consider speed to avoid rendering the player into the
+                                                                           wall in cases, where the distance between player and
+                                                                           wall is smaller than the speed per frame */
+                player.pos_x -= player.speed;
             }
         }
         if (gamepad_1 & DIR_RIGHT) {
-            if (paddle_x < 222) {
-                paddle_x += 2;
+            if ((player.pos_x + player.speed + 16) < playfield.edge_right) { /* add 16 because the right end of the paddle is x+16 */
+                player.pos_x += 4;
             }
         }
     }

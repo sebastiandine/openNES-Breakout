@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['render_5fpaddle',['render_paddle',['../render_8c.html#aedf8043e119a064c29879897bdf66f50',1,'render.c']]],
-  ['reset_5fmusic',['reset_music',['../nes__hw__functionalities_8h.html#ab6488ae01aa85f1891d0d06fa6164fd2',1,'nes_hw_functionalities.h']]]
+  ['main',['main',['../main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667',1,'main.c']]],
+  ['mainloop_5frender',['mainloop_render',['../render_8c.html#aedd9dc656adabee0aaa1887fdc431544',1,'render.c']]],
+  ['mainloop_5fupdate',['mainloop_update',['../update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f',1,'update.c']]],
+  ['memcpy',['memcpy',['../nes__hw__functionalities_8h.html#a3d38c0d50bdfde3f95c5a66e9ed68af7',1,'nes_hw_functionalities.h']]]
 ];
