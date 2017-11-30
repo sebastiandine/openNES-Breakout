@@ -18,13 +18,8 @@ enum ball_angle_dir {LEFT=1, RIGHT=2};
 /**
  * @brief This enumeration describes the movement angle of a ball.
  * The values describe y axis values, the ball will move once per frame.
- * <br>
- * HORZ = 0 px -> 0 decree <br>
- * MIN = 1  px -> aprox. 25 decree <br>
- * MID = 2 px -> aprox. 50 decree <br>
- * MAX = 4 px -> aprox. 60 decree <br>
  */
-enum ball_angle {HORZ=0, MIN=1, MID=2, MAX=4};
+enum ball_angle {HORZ=0, MIN=2, MID=3, MAX=5};
 
 /**
  * @brief This struct represents the games ball.

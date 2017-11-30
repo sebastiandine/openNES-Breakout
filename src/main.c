@@ -58,11 +58,11 @@ void main(void){
         while(1) {
             /* init ball */
             ball.pos_x = 135;
-            ball.pos_y = 180;
+            ball.pos_y = 150;
             ball.speed = 1;
-            ball.dir = UP;
+            ball.dir = DOWN;
             ball.angle_dir = LEFT;
-            ball.angle = MID;
+            ball.angle = HORZ;
 
             flag_miss = 0;
 
