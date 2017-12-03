@@ -19,6 +19,11 @@ unsigned char flag_ingame;
 unsigned char flag_pause;
 
 /**
+ * @brief tbd
+ */
+unsigned flag_gameover;
+
+/**
  * @brief  This variable indicates, if the player missed the ball and therefore
  * loses one live.
  */

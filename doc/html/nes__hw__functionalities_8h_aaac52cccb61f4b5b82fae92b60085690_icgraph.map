@@ -1,4 +1,7 @@
 <map id="unpack_RLE" name="unpack_RLE">
-<area shape="rect" id="node2" href="$nes__hw__functionalities_8h.html#aa16e9176ee0d40dc88d3c9da14f6feb8" title="This functions stores the griven background array to the given nametable in order to draw it onto the..." alt="" coords="149,5,300,32"/>
-<area shape="rect" id="node3" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="348,5,399,32"/>
+<area shape="rect" id="node2" href="$nes__hw__functionalities_8h.html#aa16e9176ee0d40dc88d3c9da14f6feb8" title="This functions stores the griven background array to the given nametable in order to draw it onto the..." alt="" coords="149,56,300,83"/>
+<area shape="rect" id="node3" href="$render_8c.html#a465a524120f35a3553c30816a946afeb" title="This function renders the ingame background resp. playfield. " alt="" coords="355,5,461,32"/>
+<area shape="rect" id="node5" href="$render_8c.html#ae26ba349763926ea58e48309a65af815" title="This function renders the menu background. " alt="" coords="359,56,457,83"/>
+<area shape="rect" id="node6" href="$render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="348,107,468,133"/>
+<area shape="rect" id="node4" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="516,56,567,83"/>
 </map>

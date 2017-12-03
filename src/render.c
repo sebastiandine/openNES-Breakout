@@ -4,12 +4,20 @@
  * @author Sebastian Dine
  */
 
+#include "menu.h"
+#include "ingame.h"
+#include "game_over.h"
+
 /**
 * @brief Sprite constants
 */
 #define SPR_BALL 0x01
 #define SPR_PADDLE_MID  0x02
 #define SPR_PADDLE_EDGE 0x03
+/**
+ * @brief Background tile constants
+ */
+#define BG_VOID 0x00
 
 /**
  * @brief This function renders the player's paddle to the screen.
@@ -24,8 +32,71 @@ void render_paddle(void){
                                         oam_offset);
 }
 
+/**
+ * @brief This function renders the ball.
+ */
 void render_ball(void){
     oam_offset = ppu_load_sprite_to_oam(ball.pos_x, ball.pos_y, SPR_BALL, SPRITE_ATTR(0,0,0,0), oam_offset);
+}
+
+/**
+ * @brief This function renders the ingame background resp. playfield.
+ */
+void render_ingame(void){
+    ppu_turn_all_off();
+    ppu_draw_background(ingame, 'a');
+    wait_Vblank();
+    ppu_turn_all_on();
+}
+
+/**
+ * @brief This function renders the menu background.
+ */
+void render_menu(void){
+    ppu_turn_all_off();
+    ppu_draw_background(menu, 'a');
+    wait_Vblank();
+    ppu_turn_all_on();
+
+}
+
+/**
+ * @brief This function renders the game over background.
+ */
+void render_gameover(void) {
+    ppu_clear_oam();
+    ppu_turn_all_off();
+    ppu_draw_background(game_over, 'a');
+    wait_Vblank();
+    ppu_turn_all_on();
+}
+
+/**
+ * @brief This function renders the players lives by disabling
+ * corresponding heart tiles.
+ */
+void render_lives(void){
+    if(player.lives == 3){
+        PPU_ADDRESS = MSB(0x205b);
+        PPU_ADDRESS = LSB(0x205b);
+        PPU_DATA = BG_VOID;
+    }
+    if(player.lives == 2){
+        PPU_ADDRESS = MSB(0x205c);
+        PPU_ADDRESS = LSB(0x205c);
+        PPU_DATA = BG_VOID;
+    }
+    if(player.lives == 1){
+        PPU_ADDRESS = MSB(0x205d);
+        PPU_ADDRESS = LSB(0x205d);
+        PPU_DATA = BG_VOID;
+    }
+    if(player.lives == 0){
+        PPU_ADDRESS = MSB(0x205e);
+        PPU_ADDRESS = LSB(0x205e);
+        PPU_DATA = BG_VOID;
+    }
+
 }
 
 /**
