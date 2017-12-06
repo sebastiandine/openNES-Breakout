@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('nes__hw__functionalities_8h.html','');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a705ec7deb75ce089210eaf94aa8d2b1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nes__hw__functionalities_8h.html#a705ec7deb75ce089210eaf94aa8d2b1b">MAPARRAY_ADR</a>(x,  y)&#160;&#160;&#160;((y&lt;&lt;2)|(x&gt;&gt;3))</td></tr>
+<tr class="memitem:a705ec7deb75ce089210eaf94aa8d2b1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nes__hw__functionalities_8h.html#a705ec7deb75ce089210eaf94aa8d2b1b">MAPARRAY_ADR</a>(x,  y)&#160;&#160;&#160;(((y&gt;&gt;3)&lt;&lt;5)|(x&gt;&gt;3))</td></tr>
 <tr class="memdesc:a705ec7deb75ce089210eaf94aa8d2b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro for calculating in which tile of the 32*30 tiles (256x240px) the given position is placed. Optimized with bitshifting, arithmetic pendant is (((y/8)*32)+(x/8)). x and y are assumed to be pixel based coordinates.  <a href="#a705ec7deb75ce089210eaf94aa8d2b1b">More...</a><br /></td></tr>
 <tr class="separator:a705ec7deb75ce089210eaf94aa8d2b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb61a4e8fff2f4624a632a3189cbd3a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nes__hw__functionalities_8h.html#aeb61a4e8fff2f4624a632a3189cbd3a0">MSB</a>(x)&#160;&#160;&#160;(((x)&gt;&gt;8))</td></tr>
@@ -391,7 +391,7 @@ Variables</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;((y&lt;&lt;2)|(x&gt;&gt;3))</td>
+          <td></td><td>&#160;&#160;&#160;(((y&gt;&gt;3)&lt;&lt;5)|(x&gt;&gt;3))</td>
         </tr>
       </table>
 </div><div class="memdoc">

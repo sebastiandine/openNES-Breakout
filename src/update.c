@@ -5,6 +5,8 @@
  * @author Sebastian Dine
  */
 
+#include "ingame_collisionmap.h"
+
 /**
  * @brief This function calculates the movement of the ball for the next frame.
  */
@@ -43,31 +45,19 @@ void ball_movement(void){
  */
 void collision_check_ball_playfield(void){
 
-    if(ball.pos_x < playfield.edge_left){
-        if(ball.angle_dir == LEFT){
-            ball.angle_dir = RIGHT;
-            return;
-        }
-        else {
-            ball.angle_dir = LEFT;
-            return;
-        }
-    }
+    collision_tile = ingame_collisionmap[MAPARRAY_ADR(ball.pos_x, ball.pos_y)];
 
-    if(ball.pos_x > playfield.edge_right){
-        if(ball.angle_dir == LEFT){
-            ball.angle_dir = RIGHT;
-            return;
-        }
-        else {
-            ball.angle_dir = LEFT;
-            return;
-        }
-    }
-
-    if(ball.pos_y < playfield.edge_top) {
+    if(collision_tile == 0x64){
         ball.dir = DOWN;
-        return;
+    }
+
+    if(collision_tile == 0x66){
+        if(ball.angle_dir == LEFT){
+            ball.angle_dir = RIGHT;
+        }
+        else {
+            ball.angle_dir = LEFT;
+        }
     }
 }
 

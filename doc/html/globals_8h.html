@@ -101,8 +101,11 @@ Variables</h2></td></tr>
 <tr class="memdesc:a55ee706f6d79bc818cb968bea99ae1b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This variable indicates whether the game is pause or not. 0 indicates, that the games is not paused, 1, that the game is paused.  <a href="#a55ee706f6d79bc818cb968bea99ae1b2">More...</a><br /></td></tr>
 <tr class="separator:a55ee706f6d79bc818cb968bea99ae1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88231356a7a0b402116a0c6840c372ee"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a88231356a7a0b402116a0c6840c372ee">flag_gameover</a></td></tr>
-<tr class="memdesc:a88231356a7a0b402116a0c6840c372ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">tbd  <a href="#a88231356a7a0b402116a0c6840c372ee">More...</a><br /></td></tr>
+<tr class="memdesc:a88231356a7a0b402116a0c6840c372ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">This variable indicates whether the game is over or not. 0 indicates, that the games is not over, 1, that the game is over.  <a href="#a88231356a7a0b402116a0c6840c372ee">More...</a><br /></td></tr>
 <tr class="separator:a88231356a7a0b402116a0c6840c372ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d2aa0f25cdb87d8e3d1f61432119dc"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#ac4d2aa0f25cdb87d8e3d1f61432119dc">collision_tile</a></td></tr>
+<tr class="memdesc:ac4d2aa0f25cdb87d8e3d1f61432119dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This variable stores the tile, which the ball collided with during the last frame.  <a href="#ac4d2aa0f25cdb87d8e3d1f61432119dc">More...</a><br /></td></tr>
+<tr class="separator:ac4d2aa0f25cdb87d8e3d1f61432119dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36d418e12f2555d9a0106113ad70274a"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a36d418e12f2555d9a0106113ad70274a">flag_miss</a></td></tr>
 <tr class="memdesc:a36d418e12f2555d9a0106113ad70274a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This variable indicates, if the player missed the ball and therefore loses one live.  <a href="#a36d418e12f2555d9a0106113ad70274a">More...</a><br /></td></tr>
 <tr class="separator:a36d418e12f2555d9a0106113ad70274a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,8 +164,24 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">        {0x0f, 0x00, 0x10, 0x30,    </div><div class="line">         0x0f, 0x00, 0x10, 0x30,</div><div class="line">         0x0f, 0x00, 0x10, 0x30,</div><div class="line">         0x0f, 0x00, 0x10, 0x30 }</div></div><!-- fragment -->
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">        {   0x0f,0x00,0x10,0x30,</div><div class="line">            0x0f,0x01,0x21,0x31,</div><div class="line">            0x0f,0x06,0x16,0x26,</div><div class="line">            0x0f,0x09,0x19,0x29 }</div></div><!-- fragment -->
 <p>Background palette. </p>
+
+</div>
+</div>
+<a id="ac4d2aa0f25cdb87d8e3d1f61432119dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4d2aa0f25cdb87d8e3d1f61432119dc">&#9670;&nbsp;</a></span>collision_tile</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char collision_tile</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This variable stores the tile, which the ball collided with during the last frame. </p>
 
 </div>
 </div>
@@ -178,7 +197,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>tbd </p>
+<p>This variable indicates whether the game is over or not. 0 indicates, that the games is not over, 1, that the game is over. </p>
 
 </div>
 </div>

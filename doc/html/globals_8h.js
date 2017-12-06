@@ -2,6 +2,7 @@ var globals_8h =
 [
     [ "ball", "globals_8h.html#a291d97ea77fd59e8f52b954ca4a6357f", null ],
     [ "bg_palette", "globals_8h.html#a73def7377b35d00806993d5fab31fe42", null ],
+    [ "collision_tile", "globals_8h.html#ac4d2aa0f25cdb87d8e3d1f61432119dc", null ],
     [ "flag_gameover", "globals_8h.html#a88231356a7a0b402116a0c6840c372ee", null ],
     [ "flag_ingame", "globals_8h.html#a4d1f02bb27f450e827b6629243dfb53b", null ],
     [ "flag_miss", "globals_8h.html#a36d418e12f2555d9a0106113ad70274a", null ],

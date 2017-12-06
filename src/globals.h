@@ -19,10 +19,16 @@ unsigned char flag_ingame;
 unsigned char flag_pause;
 
 /**
- * @brief tbd
+ * @brief This variable indicates whether the game is over or not.
+ * 0 indicates, that the games is not over, 1, that the game is over.
  */
 unsigned flag_gameover;
 
+/**
+ * @brief This variable stores the tile, which the ball collided with during
+ * the last frame.
+ */
+unsigned char collision_tile;
 /**
  * @brief  This variable indicates, if the player missed the ball and therefore
  * loses one live.
