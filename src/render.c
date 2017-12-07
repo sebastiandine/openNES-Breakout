@@ -47,6 +47,7 @@ void render_ingame(void){
     ppu_draw_background(ingame, 'a');
     wait_Vblank();
     ppu_turn_all_on();
+    ppu_reset_scroll();
 }
 
 /**
@@ -57,6 +58,7 @@ void render_menu(void){
     ppu_draw_background(menu, 'a');
     wait_Vblank();
     ppu_turn_all_on();
+    ppu_reset_scroll();
 
 }
 
@@ -69,6 +71,7 @@ void render_gameover(void) {
     ppu_draw_background(game_over, 'a');
     wait_Vblank();
     ppu_turn_all_on();
+    ppu_reset_scroll();
 }
 
 /**
@@ -96,7 +99,23 @@ void render_lives(void){
         PPU_ADDRESS = LSB(0x205e);
         PPU_DATA = BG_VOID;
     }
+    ppu_reset_scroll();
+}
 
+/**
+ * @brief This function disables the brick, that has been git by the ball during the current frame.
+ */
+void render_brickhit(void){
+
+    PPU_ADDRESS = MSB(0x2100 + brick_hit.tile_left);
+    PPU_ADDRESS = LSB(0x2100 + brick_hit.tile_left);
+    PPU_DATA = BG_VOID;
+
+    PPU_ADDRESS = MSB(0x2100 + brick_hit.tile_right);
+    PPU_ADDRESS = LSB(0x2100 + brick_hit.tile_right);
+    PPU_DATA = BG_VOID;
+
+    ppu_reset_scroll();
 }
 
 /**
@@ -108,6 +127,11 @@ void mainloop_render(void){
     if(flag_pause){
         ppu_clear_oam();
         return;
+    }
+
+    if(flag_brickhit){
+        render_brickhit();
+        flag_brickhit = 0;
     }
 
     oam_offset = 0;   /* make sure to set oam_offset to 0 before you render sprites */

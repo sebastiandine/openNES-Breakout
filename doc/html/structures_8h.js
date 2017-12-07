@@ -3,6 +3,7 @@ var structures_8h =
     [ "ball_struct", "structball__struct.html", "structball__struct" ],
     [ "playfield_struct", "structplayfield__struct.html", "structplayfield__struct" ],
     [ "player_struct", "structplayer__struct.html", "structplayer__struct" ],
+    [ "brickhit_struct", "structbrickhit__struct.html", "structbrickhit__struct" ],
     [ "ball_angle", "structures_8h.html#a4a2aa9e109e68c204e4dc6390b7bb10f", [
       [ "HORZ", "structures_8h.html#a4a2aa9e109e68c204e4dc6390b7bb10fac1f299c3dbb6b13bf62d01911d470055", null ],
       [ "MIN", "structures_8h.html#a4a2aa9e109e68c204e4dc6390b7bb10fa957e8250f68e7b5677b22397c2c1b51e", null ],

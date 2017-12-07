@@ -55,7 +55,7 @@
 /** @brief Macro for calculating in which tile of the 32*30 tiles (256x240px) the given position is placed.
    Optimized with bitshifting, arithmetic pendant is (((y/8)*32)+(x/8)). x and y are assumed to be pixel based coordinates.
 */
-#define MAPARRAY_ADR(x,y)	(((y>>3)<<5)|(x>>3)) //((y<<2)|(x>>3))
+#define MAPARRAY_ADR(x,y)	(((y>>3)<<5)|(x>>3))
 
 /**
  * @brief Macro for calculating the most significant bit of a given byte.

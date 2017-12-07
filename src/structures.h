@@ -52,5 +52,9 @@ typedef struct player_struct{
     unsigned char score;
     unsigned char lives;
     unsigned char speed;
+};
 
+typedef struct brickhit_struct{
+    unsigned char tile_left;
+    unsigned char tile_right;
 };

@@ -69,6 +69,10 @@ void main(void){
 
                 flag_miss = 0;
 
+                brick_hit.tile_left = 0;
+                brick_hit.tile_right = 0;
+                flag_brickhit = 0;
+
                 while (!flag_miss) {
                     gamepad1_input_handling();
                     mainloop_update();

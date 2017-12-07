@@ -36,6 +36,11 @@ unsigned char collision_tile;
 unsigned char flag_miss;
 
 /**
+ * @brief This flag indicated, if the ball hit a brick during the current frame.
+ */
+unsigned char flag_brickhit;
+
+/**
  * @brief This variable represents the games ball with its parameters.
  */
 static struct ball_struct ball;
@@ -49,6 +54,11 @@ static struct playfield_struct playfield;
  * @brief This variable represents the player.
  */
 static struct player_struct player;
+
+/**
+ * @brief This variable stores data about the last brick, the player hit.
+ */
+static struct brickhit_struct brick_hit;
 
 #pragma bss-name(pop)
 

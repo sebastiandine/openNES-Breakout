@@ -127,6 +127,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae4ca40a0e1b217d816247eed064cd1dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8c.html#ae4ca40a0e1b217d816247eed064cd1dc">render_lives</a> (void)</td></tr>
 <tr class="memdesc:ae4ca40a0e1b217d816247eed064cd1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function renders the players lives by disabling corresponding heart tiles.  <a href="#ae4ca40a0e1b217d816247eed064cd1dc">More...</a><br /></td></tr>
 <tr class="separator:ae4ca40a0e1b217d816247eed064cd1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf188627826f1d99d08e3b2b38f7045b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8c.html#acf188627826f1d99d08e3b2b38f7045b">render_brickhit</a> (void)</td></tr>
+<tr class="memdesc:acf188627826f1d99d08e3b2b38f7045b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function disables the brick, that has been git by the ball during the current frame.  <a href="#acf188627826f1d99d08e3b2b38f7045b">More...</a><br /></td></tr>
+<tr class="separator:acf188627826f1d99d08e3b2b38f7045b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedd9dc656adabee0aaa1887fdc431544"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8c.html#aedd9dc656adabee0aaa1887fdc431544">mainloop_render</a> (void)</td></tr>
 <tr class="memdesc:aedd9dc656adabee0aaa1887fdc431544"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function orchestrates all rendering functions and encapsulates them to the main loop.  <a href="#aedd9dc656adabee0aaa1887fdc431544">More...</a><br /></td></tr>
 <tr class="separator:aedd9dc656adabee0aaa1887fdc431544"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,9 +222,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="render_8c_aedd9dc656adabee0aaa1887fdc431544_cgraph.png" border="0" usemap="#render_8c_aedd9dc656adabee0aaa1887fdc431544_cgraph" alt=""/></div>
 <map name="render_8c_aedd9dc656adabee0aaa1887fdc431544_cgraph" id="render_8c_aedd9dc656adabee0aaa1887fdc431544_cgraph">
 <area shape="rect" id="node2" href="nes__hw__functionalities_8c.html#a34c94ebddea4cccf8f46406be1408d84" title="This function clear the whole OAM section of the PPU RAM by writing 0x00 to all spaces. " alt="" coords="171,5,281,32"/>
-<area shape="rect" id="node3" href="render_8c.html#aedf8043e119a064c29879897bdf66f50" title="This function renders the player&#39;s paddle to the screen. " alt="" coords="175,56,277,83"/>
-<area shape="rect" id="node5" href="render_8c.html#a5240636f9b79ed7294e04a004f4c881e" title="This function renders the ball. " alt="" coords="183,107,269,133"/>
-<area shape="rect" id="node4" href="nes__hw__functionalities_8c.html#a082bf910f629f7285c510addbec262ef" title="This function loads sprite information to the OAM section of PPU RAM. Internally this function loads ..." alt="" coords="329,81,492,108"/>
+<area shape="rect" id="node3" href="render_8c.html#acf188627826f1d99d08e3b2b38f7045b" title="This function disables the brick, that has been git by the ball during the current frame..." alt="" coords="173,56,279,83"/>
+<area shape="rect" id="node5" href="render_8c.html#aedf8043e119a064c29879897bdf66f50" title="This function renders the player&#39;s paddle to the screen. " alt="" coords="175,107,277,133"/>
+<area shape="rect" id="node7" href="render_8c.html#a5240636f9b79ed7294e04a004f4c881e" title="This function renders the ball. " alt="" coords="183,157,269,184"/>
+<area shape="rect" id="node4" href="nes__hw__functionalities_8c.html#a3cbab1c8c825c8dd7e439f25de7ef390" title="This functions resets scrolling. This needs to be done after every render routine. " alt="" coords="352,56,469,83"/>
+<area shape="rect" id="node6" href="nes__hw__functionalities_8c.html#a082bf910f629f7285c510addbec262ef" title="This function loads sprite information to the OAM section of PPU RAM. Internally this function loads ..." alt="" coords="329,132,492,159"/>
 </map>
 </div>
 <div class="dynheader">
@@ -272,6 +277,43 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="acf188627826f1d99d08e3b2b38f7045b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf188627826f1d99d08e3b2b38f7045b">&#9670;&nbsp;</a></span>render_brickhit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void render_brickhit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function disables the brick, that has been git by the ball during the current frame. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="render_8c_acf188627826f1d99d08e3b2b38f7045b_cgraph.png" border="0" usemap="#render_8c_acf188627826f1d99d08e3b2b38f7045b_cgraph" alt=""/></div>
+<map name="render_8c_acf188627826f1d99d08e3b2b38f7045b_cgraph" id="render_8c_acf188627826f1d99d08e3b2b38f7045b_cgraph">
+<area shape="rect" id="node2" href="nes__hw__functionalities_8c.html#a3cbab1c8c825c8dd7e439f25de7ef390" title="This functions resets scrolling. This needs to be done after every render routine. " alt="" coords="160,5,277,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="render_8c_acf188627826f1d99d08e3b2b38f7045b_icgraph.png" border="0" usemap="#render_8c_acf188627826f1d99d08e3b2b38f7045b_icgraph" alt=""/></div>
+<map name="render_8c_acf188627826f1d99d08e3b2b38f7045b_icgraph" id="render_8c_acf188627826f1d99d08e3b2b38f7045b_icgraph">
+<area shape="rect" id="node2" href="render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="This function orchestrates all rendering functions and encapsulates them to the main loop..." alt="" coords="160,5,277,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="325,5,376,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ad685663b0f8d5a90cb73894cf2a6aa73"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad685663b0f8d5a90cb73894cf2a6aa73">&#9670;&nbsp;</a></span>render_gameover()</h2>
 
@@ -299,6 +341,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node4" href="nes__hw__functionalities_8c.html#aa16e9176ee0d40dc88d3c9da14f6feb8" title="This functions stores the griven background array to the given nametable in order to draw it onto the..." alt="" coords="173,107,324,133"/>
 <area shape="rect" id="node6" href="nes__hw__functionalities_8h.html#a2dd34400e4601ecff26c9f5882c4cf3c" title="wait_Vblank" alt="" coords="203,157,295,184"/>
 <area shape="rect" id="node7" href="nes__hw__functionalities_8c.html#a1cd73eeb7504112af5ec6a88bc8428fa" title="This function enables background and sprite rendering. " alt="" coords="192,208,305,235"/>
+<area shape="rect" id="node8" href="nes__hw__functionalities_8c.html#a3cbab1c8c825c8dd7e439f25de7ef390" title="This functions resets scrolling. This needs to be done after every render routine. " alt="" coords="190,259,307,285"/>
 <area shape="rect" id="node5" href="nes__hw__functionalities_8h.html#aaac52cccb61f4b5b82fae92b60085690" title="This function unpacks an RLE&#45;compressed nametable and stores it to the address, register PPU_ADDRESS ..." alt="" coords="372,107,468,133"/>
 </map>
 </div>
@@ -339,6 +382,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node3" href="nes__hw__functionalities_8c.html#aa16e9176ee0d40dc88d3c9da14f6feb8" title="This functions stores the griven background array to the given nametable in order to draw it onto the..." alt="" coords="160,56,311,83"/>
 <area shape="rect" id="node5" href="nes__hw__functionalities_8h.html#a2dd34400e4601ecff26c9f5882c4cf3c" title="wait_Vblank" alt="" coords="189,107,281,133"/>
 <area shape="rect" id="node6" href="nes__hw__functionalities_8c.html#a1cd73eeb7504112af5ec6a88bc8428fa" title="This function enables background and sprite rendering. " alt="" coords="179,157,292,184"/>
+<area shape="rect" id="node7" href="nes__hw__functionalities_8c.html#a3cbab1c8c825c8dd7e439f25de7ef390" title="This functions resets scrolling. This needs to be done after every render routine. " alt="" coords="177,208,294,235"/>
 <area shape="rect" id="node4" href="nes__hw__functionalities_8h.html#aaac52cccb61f4b5b82fae92b60085690" title="This function unpacks an RLE&#45;compressed nametable and stores it to the address, register PPU_ADDRESS ..." alt="" coords="359,56,455,83"/>
 </map>
 </div>
@@ -370,6 +414,14 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>This function renders the players lives by disabling corresponding heart tiles. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="render_8c_ae4ca40a0e1b217d816247eed064cd1dc_cgraph.png" border="0" usemap="#render_8c_ae4ca40a0e1b217d816247eed064cd1dc_cgraph" alt=""/></div>
+<map name="render_8c_ae4ca40a0e1b217d816247eed064cd1dc_cgraph" id="render_8c_ae4ca40a0e1b217d816247eed064cd1dc_cgraph">
+<area shape="rect" id="node2" href="nes__hw__functionalities_8c.html#a3cbab1c8c825c8dd7e439f25de7ef390" title="This functions resets scrolling. This needs to be done after every render routine. " alt="" coords="144,5,261,32"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -407,6 +459,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node3" href="nes__hw__functionalities_8c.html#aa16e9176ee0d40dc88d3c9da14f6feb8" title="This functions stores the griven background array to the given nametable in order to draw it onto the..." alt="" coords="151,56,301,83"/>
 <area shape="rect" id="node5" href="nes__hw__functionalities_8h.html#a2dd34400e4601ecff26c9f5882c4cf3c" title="wait_Vblank" alt="" coords="180,107,272,133"/>
 <area shape="rect" id="node6" href="nes__hw__functionalities_8c.html#a1cd73eeb7504112af5ec6a88bc8428fa" title="This function enables background and sprite rendering. " alt="" coords="169,157,283,184"/>
+<area shape="rect" id="node7" href="nes__hw__functionalities_8c.html#a3cbab1c8c825c8dd7e439f25de7ef390" title="This functions resets scrolling. This needs to be done after every render routine. " alt="" coords="167,208,285,235"/>
 <area shape="rect" id="node4" href="nes__hw__functionalities_8h.html#aaac52cccb61f4b5b82fae92b60085690" title="This function unpacks an RLE&#45;compressed nametable and stores it to the address, register PPU_ADDRESS ..." alt="" coords="349,56,445,83"/>
 </map>
 </div>

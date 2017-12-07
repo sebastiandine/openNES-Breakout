@@ -49,16 +49,50 @@ void collision_check_ball_playfield(void){
 
     if(collision_tile == 0x64){
         ball.dir = DOWN;
+        return;
     }
 
     if(collision_tile == 0x66){
         if(ball.angle_dir == LEFT){
             ball.angle_dir = RIGHT;
+            return;
         }
         else {
             ball.angle_dir = LEFT;
+            return;
         }
     }
+}
+
+unsigned char collision_check_ball_brick(void){
+
+    collision_tile = ingame_collisionmap[MAPARRAY_ADR(ball.pos_x, ball.pos_y)];
+
+    if(collision_tile == 0x61){
+        ball.dir = DOWN;
+
+        brick_hit.tile_left = MAPARRAY_ADR(ball.pos_x, ball.pos_y);
+        brick_hit.tile_right = brick_hit.tile_left + 1;
+
+        //ingame_collisionmap[brick_hit.tile_left] = 0x00;
+        //ingame_collisionmap[brick_hit.tile_right] = 0x00;
+
+        return 1;
+    }
+    if(collision_tile == 0x062){
+        ball.dir = DOWN;
+
+        brick_hit.tile_right = MAPARRAY_ADR(ball.pos_x, ball.pos_y);
+        brick_hit.tile_left = brick_hit.tile_right - 1;
+
+        //ingame_collisionmap[brick_hit.tile_left] = 0x00;
+        //ingame_collisionmap[brick_hit.tile_right] = 0x00;
+
+        return 1;
+
+    }
+    return 0;
+
 }
 
 /**
@@ -161,6 +195,7 @@ void mainloop_update(void){
     collision_check_ball_playfield();
     collision_check_ball_player();
 
+    flag_brickhit = collision_check_ball_brick();
     flag_miss = collisions_check_ball_bottom();
 
 }
