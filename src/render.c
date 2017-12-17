@@ -118,6 +118,7 @@ void render_brickhit(void){
     ppu_reset_scroll();
 }
 
+
 /**
  * @brief This function orchestrates all rendering functions and encapsulates them to the main loop.
  */

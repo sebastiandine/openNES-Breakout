@@ -25,10 +25,16 @@ unsigned char flag_pause;
 unsigned flag_gameover;
 
 /**
- * @brief This variable stores the tile, which the ball collided with during
- * the last frame.
+ * @brief This variable stores the collision map tile, which the ball collided with during
+ * the current frame.
  */
 unsigned char collision_tile;
+
+/**
+ * @brief This variable stores the collision map tile address, resp. the bg tile address of the tile,
+ * which the ball collided with during the last frame.
+ */
+unsigned char collision_addr;
 /**
  * @brief  This variable indicates, if the player missed the ball and therefore
  * loses one live.
@@ -57,6 +63,7 @@ static struct player_struct player;
 
 /**
  * @brief This variable stores data about the last brick, the player hit.
+ * Data will be used to render a blank tile to the place of the brick, which got hit.
  */
 static struct brickhit_struct brick_hit;
 

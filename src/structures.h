@@ -54,7 +54,10 @@ typedef struct player_struct{
     unsigned char speed;
 };
 
+/**
+ * @brief This structure represents the brick, which was hit by the ball.
+ */
 typedef struct brickhit_struct{
-    unsigned char tile_left;
-    unsigned char tile_right;
+    unsigned int tile_left;
+    unsigned int tile_right;
 };

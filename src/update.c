@@ -45,14 +45,7 @@ void ball_movement(void){
  */
 void collision_check_ball_playfield(void){
 
-    collision_tile = ingame_collisionmap[MAPARRAY_ADR(ball.pos_x, ball.pos_y)];
-
-    if(collision_tile == 0x64){
-        ball.dir = DOWN;
-        return;
-    }
-
-    if(collision_tile == 0x66){
+    if(ball.pos_x < playfield.edge_left){
         if(ball.angle_dir == LEFT){
             ball.angle_dir = RIGHT;
             return;
@@ -62,38 +55,70 @@ void collision_check_ball_playfield(void){
             return;
         }
     }
+
+    if(ball.pos_x > playfield.edge_right){
+        if(ball.angle_dir == LEFT){
+            ball.angle_dir = RIGHT;
+            return;
+        }
+        else {
+            ball.angle_dir = LEFT;
+            return;
+        }
+    }
+
+    if(ball.pos_y < playfield.edge_top) {
+        ball.dir = DOWN;
+        return;
+    }
 }
 
+/**
+ * @brief this function calculates the collision between the ball and the bricks.
+ * @return 1, if the ball hit a brick during this frame, 0 if not.
+ */
 unsigned char collision_check_ball_brick(void){
 
-    collision_tile = ingame_collisionmap[MAPARRAY_ADR(ball.pos_x, ball.pos_y)];
+    if(ball.pos_y < 111){ //ball is one bg line before first line of bricks
 
-    if(collision_tile == 0x61){
-        ball.dir = DOWN;
+        /* get tile in collision map */
+        collision_addr = MAPARRAY_ADR(ball.pos_x, (ball.pos_y - ball.speed)) - 0xC0; /* convert bg tile address to collision map tile address.
+                                                                                      * - 0xC0 since the collision map starts
+                                                                                       at bg tile 0xE0 */
+        collision_tile = ingame_collisionmap[collision_addr];
 
-        brick_hit.tile_left = MAPARRAY_ADR(ball.pos_x, ball.pos_y);
-        brick_hit.tile_right = brick_hit.tile_left + 1;
+        if(collision_tile == 0x61){
+            ball.dir = DOWN;
 
-        //ingame_collisionmap[brick_hit.tile_left] = 0x00;
-        //ingame_collisionmap[brick_hit.tile_right] = 0x00;
+            /* update collision map */
+            ingame_collisionmap[collision_addr] = 0x00;
+            ingame_collisionmap[collision_addr +1] = 0x00;
 
-        return 1;
-    }
-    if(collision_tile == 0x062){
-        ball.dir = DOWN;
+            /* calculate bg tiles, which need to be rendered with blank tiles */
+            brick_hit.tile_left = collision_addr - 0x20; //convert collision map tile address to bg-tile address
+            brick_hit.tile_right = brick_hit.tile_left + 1;
 
-        brick_hit.tile_right = MAPARRAY_ADR(ball.pos_x, ball.pos_y);
-        brick_hit.tile_left = brick_hit.tile_right - 1;
+            return 1;
+        }
+        if(collision_tile == 0x62){
+            ball.dir = DOWN;
 
-        //ingame_collisionmap[brick_hit.tile_left] = 0x00;
-        //ingame_collisionmap[brick_hit.tile_right] = 0x00;
+            /* update collision map */
+            ingame_collisionmap[collision_addr] = 0x00;
+            ingame_collisionmap[collision_addr -1] = 0x00;
 
-        return 1;
+            /* calculate bg tiles, which need to be rendered with blank tiles */
+            brick_hit.tile_right = collision_addr - 0x20; //convert collision map tile address to bg-tile address
+            brick_hit.tile_left = brick_hit.tile_right - 1;
+
+            return 1;
+        }
 
     }
     return 0;
 
 }
+
 
 /**
  * @brief This function checks the collision of the ball with the player and calculates the

@@ -1,5 +1,5 @@
 var structbrickhit__struct =
 [
-    [ "tile_left", "structbrickhit__struct.html#a276616f57b73c58b6f0c855e61d94231", null ],
-    [ "tile_right", "structbrickhit__struct.html#ae38d618c965982c006bed8132daad643", null ]
+    [ "tile_left", "structbrickhit__struct.html#a2428c8bbd2d9ad2d9cda8c2456d12fb7", null ],
+    [ "tile_right", "structbrickhit__struct.html#ad68b03b1af66ec86415fcf176787d2a1", null ]
 ];

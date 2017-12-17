@@ -104,8 +104,11 @@ Variables</h2></td></tr>
 <tr class="memdesc:a88231356a7a0b402116a0c6840c372ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">This variable indicates whether the game is over or not. 0 indicates, that the games is not over, 1, that the game is over.  <a href="#a88231356a7a0b402116a0c6840c372ee">More...</a><br /></td></tr>
 <tr class="separator:a88231356a7a0b402116a0c6840c372ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4d2aa0f25cdb87d8e3d1f61432119dc"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#ac4d2aa0f25cdb87d8e3d1f61432119dc">collision_tile</a></td></tr>
-<tr class="memdesc:ac4d2aa0f25cdb87d8e3d1f61432119dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This variable stores the tile, which the ball collided with during the last frame.  <a href="#ac4d2aa0f25cdb87d8e3d1f61432119dc">More...</a><br /></td></tr>
+<tr class="memdesc:ac4d2aa0f25cdb87d8e3d1f61432119dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This variable stores the collision map tile, which the ball collided with during the current frame.  <a href="#ac4d2aa0f25cdb87d8e3d1f61432119dc">More...</a><br /></td></tr>
 <tr class="separator:ac4d2aa0f25cdb87d8e3d1f61432119dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2457bc0854591781a18ef90e8e3480c"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#ad2457bc0854591781a18ef90e8e3480c">collision_addr</a></td></tr>
+<tr class="memdesc:ad2457bc0854591781a18ef90e8e3480c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This variable stores the collision map tile address, resp. the bg tile address of the tile, which the ball collided with during the last frame.  <a href="#ad2457bc0854591781a18ef90e8e3480c">More...</a><br /></td></tr>
+<tr class="separator:ad2457bc0854591781a18ef90e8e3480c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36d418e12f2555d9a0106113ad70274a"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a36d418e12f2555d9a0106113ad70274a">flag_miss</a></td></tr>
 <tr class="memdesc:a36d418e12f2555d9a0106113ad70274a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This variable indicates, if the player missed the ball and therefore loses one live.  <a href="#a36d418e12f2555d9a0106113ad70274a">More...</a><br /></td></tr>
 <tr class="separator:a36d418e12f2555d9a0106113ad70274a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,7 +125,7 @@ Variables</h2></td></tr>
 <tr class="memdesc:a528c8b1346f8d101002aecd3c514029e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This variable represents the player.  <a href="#a528c8b1346f8d101002aecd3c514029e">More...</a><br /></td></tr>
 <tr class="separator:a528c8b1346f8d101002aecd3c514029e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfd2a88f3f5da5ece56a9ed358b804f6"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structbrickhit__struct.html">brickhit_struct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#adfd2a88f3f5da5ece56a9ed358b804f6">brick_hit</a></td></tr>
-<tr class="memdesc:adfd2a88f3f5da5ece56a9ed358b804f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This variable stores data about the last brick, the player hit.  <a href="#adfd2a88f3f5da5ece56a9ed358b804f6">More...</a><br /></td></tr>
+<tr class="memdesc:adfd2a88f3f5da5ece56a9ed358b804f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This variable stores data about the last brick, the player hit. Data will be used to render a blank tile to the place of the brick, which got hit.  <a href="#adfd2a88f3f5da5ece56a9ed358b804f6">More...</a><br /></td></tr>
 <tr class="separator:adfd2a88f3f5da5ece56a9ed358b804f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73def7377b35d00806993d5fab31fe42"><td class="memItemLeft" align="right" valign="top">const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a73def7377b35d00806993d5fab31fe42">bg_palette</a> [16]</td></tr>
 <tr class="memdesc:a73def7377b35d00806993d5fab31fe42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background palette.  <a href="#a73def7377b35d00806993d5fab31fe42">More...</a><br /></td></tr>
@@ -195,7 +198,23 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This variable stores data about the last brick, the player hit. </p>
+<p>This variable stores data about the last brick, the player hit. Data will be used to render a blank tile to the place of the brick, which got hit. </p>
+
+</div>
+</div>
+<a id="ad2457bc0854591781a18ef90e8e3480c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2457bc0854591781a18ef90e8e3480c">&#9670;&nbsp;</a></span>collision_addr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char collision_addr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This variable stores the collision map tile address, resp. the bg tile address of the tile, which the ball collided with during the last frame. </p>
 
 </div>
 </div>
@@ -211,7 +230,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This variable stores the tile, which the ball collided with during the last frame. </p>
+<p>This variable stores the collision map tile, which the ball collided with during the current frame. </p>
 
 </div>
 </div>
