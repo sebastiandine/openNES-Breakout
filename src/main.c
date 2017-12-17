@@ -52,6 +52,9 @@ void main(void){
             /* init player */
             player.pos_x = 125;
             player.score = 0;
+            player.score_digit1 = 0;
+            player.score_digit2 = 0;
+            player.score_digit3 = 0;
             player.lives = 4;
             player.speed = 4;
 

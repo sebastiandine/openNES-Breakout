@@ -88,6 +88,7 @@ unsigned char collision_check_ball_brick(void){
         collision_tile = ingame_collisionmap[collision_addr];
 
         if(collision_tile == 0x61){
+            ++player.score;
             ball.dir = DOWN;
 
             /* update collision map */
@@ -102,6 +103,7 @@ unsigned char collision_check_ball_brick(void){
         }
         if(collision_tile == 0x62){
             ball.dir = DOWN;
+            ++player.score;
 
             /* update collision map */
             ingame_collisionmap[collision_addr] = 0x00;
@@ -116,6 +118,64 @@ unsigned char collision_check_ball_brick(void){
 
     }
     return 0;
+
+}
+
+/**
+ * @brief This function calculates the digits of the players score.
+ * Since calculating digits (reason modulo opp) is quite time consuming, it needs to be put out of
+ * the render routine.
+ */
+void calc_score_digits(void){
+
+    player.score_digit1 = 0x10 + (player.score >> 10);
+    player.score_digit2 = 0x10 + ((player.score / 10)%10);
+    player.score_digit3 = 0x10 + (player.score %10);
+}
+
+/**
+ * @brief This function calculates the speed of the balld and the score of the player, corresponding
+ * to the brick, the player hit during the current frame.
+ */
+void calc_score_and_speed(void){
+
+    if(collision_addr > 1 && collision_addr < 30){
+        ball.speed = 4;
+        player.score += 4;
+        calc_score_digits();
+        return;
+    }
+    if(collision_addr > 33 && collision_addr < 62){
+        ball.speed = 3;
+        player.score += 3;
+        calc_score_digits();
+        return;
+    }
+    if(collision_addr > 65 && collision_addr < 94){
+        ball.speed = 3;
+        player.score += 3;
+        calc_score_digits();
+        return;
+    }
+    if(collision_addr > 97 && collision_addr < 126){
+        ball.speed = 2;
+        player.score += 2;
+        calc_score_digits();
+        return;
+    }
+    if(collision_addr > 129 && collision_addr < 158){
+        ball.speed = 2;
+        player.score += 2;
+        calc_score_digits();
+        return;
+    }
+    if(collision_addr > 161 && collision_addr < 190){
+        ball.speed = 1;
+        player.score += 1;
+        calc_score_digits();
+        return;
+    }
+
 
 }
 
@@ -214,13 +274,19 @@ unsigned char collisions_check_ball_bottom(void){
  */
 void mainloop_update(void){
 
-    /* calculation of ball movement and speed */
-    ball_movement();
+    if(!flag_pause) {
+        /* calculation of ball movement and speed */
+        ball_movement();
 
-    collision_check_ball_playfield();
-    collision_check_ball_player();
+        collision_check_ball_playfield();
+        collision_check_ball_player();
 
-    flag_brickhit = collision_check_ball_brick();
-    flag_miss = collisions_check_ball_bottom();
+        flag_brickhit = collision_check_ball_brick();
+        if (flag_brickhit) {
+            calc_score_and_speed();
+        }
+
+        flag_miss = collisions_check_ball_bottom();
+    }
 
 }

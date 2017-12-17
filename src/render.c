@@ -118,6 +118,25 @@ void render_brickhit(void){
     ppu_reset_scroll();
 }
 
+/**
+ * @brief This function renders the score of the player.
+ */
+void render_score(void){
+
+    PPU_ADDRESS = MSB(0x2049);
+    PPU_ADDRESS = LSB(0x2049);
+    PPU_DATA = player.score_digit1;
+
+    PPU_ADDRESS = MSB(0x204A);
+    PPU_ADDRESS = LSB(0x204A);
+    PPU_DATA = player.score_digit2;
+
+    PPU_ADDRESS = MSB(0x204B);
+    PPU_ADDRESS = LSB(0x204B);
+    PPU_DATA = player.score_digit3;
+    ppu_reset_scroll();
+}
+
 
 /**
  * @brief This function orchestrates all rendering functions and encapsulates them to the main loop.
@@ -132,6 +151,7 @@ void mainloop_render(void){
 
     if(flag_brickhit){
         render_brickhit();
+        render_score();
         flag_brickhit = 0;
     }
 

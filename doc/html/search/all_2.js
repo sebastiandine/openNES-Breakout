@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['calc_5fscore_5fand_5fspeed',['calc_score_and_speed',['../update_8c.html#a2084f0f9d1f642b3118ceb312151acec',1,'update.c']]],
+  ['calc_5fscore_5fdigits',['calc_score_digits',['../update_8c.html#a0ba288acf1db0a47af07fbe28cc3843e',1,'update.c']]],
   ['collision_5faddr',['collision_addr',['../globals_8h.html#ad2457bc0854591781a18ef90e8e3480c',1,'globals.h']]],
   ['collision_5fcheck_5fball_5fbrick',['collision_check_ball_brick',['../update_8c.html#af5e3b0e0371590019c488494982c8c57',1,'update.c']]],
   ['collision_5fcheck_5fball_5fplayer',['collision_check_ball_player',['../update_8c.html#a308fa1dee76f9353881ef54bd0e2639e',1,'update.c']]],

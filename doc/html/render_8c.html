@@ -130,6 +130,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acf188627826f1d99d08e3b2b38f7045b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8c.html#acf188627826f1d99d08e3b2b38f7045b">render_brickhit</a> (void)</td></tr>
 <tr class="memdesc:acf188627826f1d99d08e3b2b38f7045b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function disables the brick, that has been git by the ball during the current frame.  <a href="#acf188627826f1d99d08e3b2b38f7045b">More...</a><br /></td></tr>
 <tr class="separator:acf188627826f1d99d08e3b2b38f7045b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c9fe4d086301a3821d7fb93a7158341"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8c.html#a2c9fe4d086301a3821d7fb93a7158341">render_score</a> (void)</td></tr>
+<tr class="memdesc:a2c9fe4d086301a3821d7fb93a7158341"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function renders the score of the player.  <a href="#a2c9fe4d086301a3821d7fb93a7158341">More...</a><br /></td></tr>
+<tr class="separator:a2c9fe4d086301a3821d7fb93a7158341"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedd9dc656adabee0aaa1887fdc431544"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8c.html#aedd9dc656adabee0aaa1887fdc431544">mainloop_render</a> (void)</td></tr>
 <tr class="memdesc:aedd9dc656adabee0aaa1887fdc431544"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function orchestrates all rendering functions and encapsulates them to the main loop.  <a href="#aedd9dc656adabee0aaa1887fdc431544">More...</a><br /></td></tr>
 <tr class="separator:aedd9dc656adabee0aaa1887fdc431544"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,10 +226,11 @@ Here is the call graph for this function:</div>
 <map name="render_8c_aedd9dc656adabee0aaa1887fdc431544_cgraph" id="render_8c_aedd9dc656adabee0aaa1887fdc431544_cgraph">
 <area shape="rect" id="node2" href="nes__hw__functionalities_8c.html#a34c94ebddea4cccf8f46406be1408d84" title="This function clear the whole OAM section of the PPU RAM by writing 0x00 to all spaces. " alt="" coords="171,5,281,32"/>
 <area shape="rect" id="node3" href="render_8c.html#acf188627826f1d99d08e3b2b38f7045b" title="This function disables the brick, that has been git by the ball during the current frame..." alt="" coords="173,56,279,83"/>
-<area shape="rect" id="node5" href="render_8c.html#aedf8043e119a064c29879897bdf66f50" title="This function renders the player&#39;s paddle to the screen. " alt="" coords="175,107,277,133"/>
-<area shape="rect" id="node7" href="render_8c.html#a5240636f9b79ed7294e04a004f4c881e" title="This function renders the ball. " alt="" coords="183,157,269,184"/>
-<area shape="rect" id="node4" href="nes__hw__functionalities_8c.html#a3cbab1c8c825c8dd7e439f25de7ef390" title="This functions resets scrolling. This needs to be done after every render routine. " alt="" coords="352,56,469,83"/>
-<area shape="rect" id="node6" href="nes__hw__functionalities_8c.html#a082bf910f629f7285c510addbec262ef" title="This function loads sprite information to the OAM section of PPU RAM. Internally this function loads ..." alt="" coords="329,132,492,159"/>
+<area shape="rect" id="node5" href="render_8c.html#a2c9fe4d086301a3821d7fb93a7158341" title="This function renders the score of the player. " alt="" coords="177,107,275,133"/>
+<area shape="rect" id="node6" href="render_8c.html#aedf8043e119a064c29879897bdf66f50" title="This function renders the player&#39;s paddle to the screen. " alt="" coords="175,157,277,184"/>
+<area shape="rect" id="node8" href="render_8c.html#a5240636f9b79ed7294e04a004f4c881e" title="This function renders the ball. " alt="" coords="183,208,269,235"/>
+<area shape="rect" id="node4" href="nes__hw__functionalities_8c.html#a3cbab1c8c825c8dd7e439f25de7ef390" title="This functions resets scrolling. This needs to be done after every render routine. " alt="" coords="352,95,469,121"/>
+<area shape="rect" id="node7" href="nes__hw__functionalities_8c.html#a082bf910f629f7285c510addbec262ef" title="This function loads sprite information to the OAM section of PPU RAM. Internally this function loads ..." alt="" coords="329,171,492,197"/>
 </map>
 </div>
 <div class="dynheader">
@@ -506,6 +510,43 @@ Here is the caller graph for this function:</div>
 <map name="render_8c_aedf8043e119a064c29879897bdf66f50_icgraph" id="render_8c_aedf8043e119a064c29879897bdf66f50_icgraph">
 <area shape="rect" id="node2" href="render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="This function orchestrates all rendering functions and encapsulates them to the main loop..." alt="" coords="156,5,273,32"/>
 <area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="321,5,372,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2c9fe4d086301a3821d7fb93a7158341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c9fe4d086301a3821d7fb93a7158341">&#9670;&nbsp;</a></span>render_score()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void render_score </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function renders the score of the player. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="render_8c_a2c9fe4d086301a3821d7fb93a7158341_cgraph.png" border="0" usemap="#render_8c_a2c9fe4d086301a3821d7fb93a7158341_cgraph" alt=""/></div>
+<map name="render_8c_a2c9fe4d086301a3821d7fb93a7158341_cgraph" id="render_8c_a2c9fe4d086301a3821d7fb93a7158341_cgraph">
+<area shape="rect" id="node2" href="nes__hw__functionalities_8c.html#a3cbab1c8c825c8dd7e439f25de7ef390" title="This functions resets scrolling. This needs to be done after every render routine. " alt="" coords="151,5,268,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="render_8c_a2c9fe4d086301a3821d7fb93a7158341_icgraph.png" border="0" usemap="#render_8c_a2c9fe4d086301a3821d7fb93a7158341_icgraph" alt=""/></div>
+<map name="render_8c_a2c9fe4d086301a3821d7fb93a7158341_icgraph" id="render_8c_a2c9fe4d086301a3821d7fb93a7158341_icgraph">
+<area shape="rect" id="node2" href="render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="This function orchestrates all rendering functions and encapsulates them to the main loop..." alt="" coords="151,5,268,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="316,5,367,32"/>
 </map>
 </div>
 

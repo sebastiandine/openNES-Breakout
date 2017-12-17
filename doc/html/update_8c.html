@@ -102,6 +102,12 @@ Functions</h2></td></tr>
 <tr class="memitem:af5e3b0e0371590019c488494982c8c57"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="update_8c.html#af5e3b0e0371590019c488494982c8c57">collision_check_ball_brick</a> (void)</td></tr>
 <tr class="memdesc:af5e3b0e0371590019c488494982c8c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">this function calculates the collision between the ball and the bricks.  <a href="#af5e3b0e0371590019c488494982c8c57">More...</a><br /></td></tr>
 <tr class="separator:af5e3b0e0371590019c488494982c8c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba288acf1db0a47af07fbe28cc3843e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="update_8c.html#a0ba288acf1db0a47af07fbe28cc3843e">calc_score_digits</a> (void)</td></tr>
+<tr class="memdesc:a0ba288acf1db0a47af07fbe28cc3843e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the digits of the players score. Since calculating digits (reason modulo opp) is quite time consuming, it needs to be put out of the render routine.  <a href="#a0ba288acf1db0a47af07fbe28cc3843e">More...</a><br /></td></tr>
+<tr class="separator:a0ba288acf1db0a47af07fbe28cc3843e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2084f0f9d1f642b3118ceb312151acec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="update_8c.html#a2084f0f9d1f642b3118ceb312151acec">calc_score_and_speed</a> (void)</td></tr>
+<tr class="memdesc:a2084f0f9d1f642b3118ceb312151acec"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the speed of the balld and the score of the player, corresponding to the brick, the player hit during the current frame.  <a href="#a2084f0f9d1f642b3118ceb312151acec">More...</a><br /></td></tr>
+<tr class="separator:a2084f0f9d1f642b3118ceb312151acec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a308fa1dee76f9353881ef54bd0e2639e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="update_8c.html#a308fa1dee76f9353881ef54bd0e2639e">collision_check_ball_player</a> (void)</td></tr>
 <tr class="memdesc:a308fa1dee76f9353881ef54bd0e2639e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function checks the collision of the ball with the player and calculates the resulting movement of the ball in case of a collision.  <a href="#a308fa1dee76f9353881ef54bd0e2639e">More...</a><br /></td></tr>
 <tr class="separator:a308fa1dee76f9353881ef54bd0e2639e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,6 +146,73 @@ Here is the caller graph for this function:</div>
 <map name="update_8c_aba4374510db17b9eb700fa0e60d4f31d_icgraph" id="update_8c_aba4374510db17b9eb700fa0e60d4f31d_icgraph">
 <area shape="rect" id="node2" href="update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f" title="This function orchestrates all update functions and encapsulates them to the main loop..." alt="" coords="161,5,281,32"/>
 <area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="329,5,380,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2084f0f9d1f642b3118ceb312151acec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2084f0f9d1f642b3118ceb312151acec">&#9670;&nbsp;</a></span>calc_score_and_speed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void calc_score_and_speed </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function calculates the speed of the balld and the score of the player, corresponding to the brick, the player hit during the current frame. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="update_8c_a2084f0f9d1f642b3118ceb312151acec_cgraph.png" border="0" usemap="#update_8c_a2084f0f9d1f642b3118ceb312151acec_cgraph" alt=""/></div>
+<map name="update_8c_a2084f0f9d1f642b3118ceb312151acec_cgraph" id="update_8c_a2084f0f9d1f642b3118ceb312151acec_cgraph">
+<area shape="rect" id="node2" href="update_8c.html#a0ba288acf1db0a47af07fbe28cc3843e" title="This function calculates the digits of the players score. Since calculating digits (reason modulo opp..." alt="" coords="208,5,331,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="update_8c_a2084f0f9d1f642b3118ceb312151acec_icgraph.png" border="0" usemap="#update_8c_a2084f0f9d1f642b3118ceb312151acec_icgraph" alt=""/></div>
+<map name="update_8c_a2084f0f9d1f642b3118ceb312151acec_icgraph" id="update_8c_a2084f0f9d1f642b3118ceb312151acec_icgraph">
+<area shape="rect" id="node2" href="update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f" title="This function orchestrates all update functions and encapsulates them to the main loop..." alt="" coords="208,5,328,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="376,5,427,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0ba288acf1db0a47af07fbe28cc3843e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba288acf1db0a47af07fbe28cc3843e">&#9670;&nbsp;</a></span>calc_score_digits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void calc_score_digits </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function calculates the digits of the players score. Since calculating digits (reason modulo opp) is quite time consuming, it needs to be put out of the render routine. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="update_8c_a0ba288acf1db0a47af07fbe28cc3843e_icgraph.png" border="0" usemap="#update_8c_a0ba288acf1db0a47af07fbe28cc3843e_icgraph" alt=""/></div>
+<map name="update_8c_a0ba288acf1db0a47af07fbe28cc3843e_icgraph" id="update_8c_a0ba288acf1db0a47af07fbe28cc3843e_icgraph">
+<area shape="rect" id="node2" href="update_8c.html#a2084f0f9d1f642b3118ceb312151acec" title="This function calculates the speed of the balld and the score of the player, corresponding to the bri..." alt="" coords="176,5,331,32"/>
+<area shape="rect" id="node3" href="update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f" title="This function orchestrates all update functions and encapsulates them to the main loop..." alt="" coords="379,5,499,32"/>
+<area shape="rect" id="node4" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="547,5,597,32"/>
 </map>
 </div>
 
@@ -285,11 +358,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="update_8c_a31c8504e7fe9671dbda52ba62a382b1f_cgraph.png" border="0" usemap="#update_8c_a31c8504e7fe9671dbda52ba62a382b1f_cgraph" alt=""/></div>
 <map name="update_8c_a31c8504e7fe9671dbda52ba62a382b1f_cgraph" id="update_8c_a31c8504e7fe9671dbda52ba62a382b1f_cgraph">
-<area shape="rect" id="node2" href="update_8c.html#aba4374510db17b9eb700fa0e60d4f31d" title="This function calculates the movement of the ball for the next frame. " alt="" coords="192,5,300,32"/>
-<area shape="rect" id="node3" href="update_8c.html#a17fb642ca8bf0b56a7e847004899dff4" title="This function checks the collision of the ball with the playfield and calculates the resulting moveme..." alt="" coords="177,57,315,98"/>
-<area shape="rect" id="node4" href="update_8c.html#a308fa1dee76f9353881ef54bd0e2639e" title="This function checks the collision of the ball with the player and calculates the resulting movement ..." alt="" coords="177,122,315,163"/>
-<area shape="rect" id="node5" href="update_8c.html#af5e3b0e0371590019c488494982c8c57" title="this function calculates the collision between the ball and the bricks. " alt="" coords="177,187,315,229"/>
-<area shape="rect" id="node6" href="update_8c.html#adee033f2a7b05040eec3f974a94537ec" title="This function checks, if the ball moved below the bottom of the playfield. " alt="" coords="173,253,319,294"/>
+<area shape="rect" id="node2" href="update_8c.html#aba4374510db17b9eb700fa0e60d4f31d" title="This function calculates the movement of the ball for the next frame. " alt="" coords="197,5,305,32"/>
+<area shape="rect" id="node3" href="update_8c.html#a17fb642ca8bf0b56a7e847004899dff4" title="This function checks the collision of the ball with the playfield and calculates the resulting moveme..." alt="" coords="181,57,320,98"/>
+<area shape="rect" id="node4" href="update_8c.html#a308fa1dee76f9353881ef54bd0e2639e" title="This function checks the collision of the ball with the player and calculates the resulting movement ..." alt="" coords="181,122,320,163"/>
+<area shape="rect" id="node5" href="update_8c.html#af5e3b0e0371590019c488494982c8c57" title="this function calculates the collision between the ball and the bricks. " alt="" coords="181,187,320,229"/>
+<area shape="rect" id="node6" href="update_8c.html#a2084f0f9d1f642b3118ceb312151acec" title="This function calculates the speed of the balld and the score of the player, corresponding to the bri..." alt="" coords="173,253,328,280"/>
+<area shape="rect" id="node8" href="update_8c.html#adee033f2a7b05040eec3f974a94537ec" title="This function checks, if the ball moved below the bottom of the playfield. " alt="" coords="178,305,323,346"/>
+<area shape="rect" id="node7" href="update_8c.html#a0ba288acf1db0a47af07fbe28cc3843e" title="This function calculates the digits of the players score. Since calculating digits (reason modulo opp..." alt="" coords="376,253,499,280"/>
 </map>
 </div>
 <div class="dynheader">

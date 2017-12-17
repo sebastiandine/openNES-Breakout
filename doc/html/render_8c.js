@@ -11,5 +11,6 @@ var render_8c =
     [ "render_ingame", "render_8c.html#a465a524120f35a3553c30816a946afeb", null ],
     [ "render_lives", "render_8c.html#ae4ca40a0e1b217d816247eed064cd1dc", null ],
     [ "render_menu", "render_8c.html#ae26ba349763926ea58e48309a65af815", null ],
-    [ "render_paddle", "render_8c.html#aedf8043e119a064c29879897bdf66f50", null ]
+    [ "render_paddle", "render_8c.html#aedf8043e119a064c29879897bdf66f50", null ],
+    [ "render_score", "render_8c.html#a2c9fe4d086301a3821d7fb93a7158341", null ]
 ];

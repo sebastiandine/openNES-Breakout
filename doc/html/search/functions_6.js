@@ -7,5 +7,6 @@ var searchData=
   ['render_5flives',['render_lives',['../render_8c.html#ae4ca40a0e1b217d816247eed064cd1dc',1,'render.c']]],
   ['render_5fmenu',['render_menu',['../render_8c.html#ae26ba349763926ea58e48309a65af815',1,'render.c']]],
   ['render_5fpaddle',['render_paddle',['../render_8c.html#aedf8043e119a064c29879897bdf66f50',1,'render.c']]],
+  ['render_5fscore',['render_score',['../render_8c.html#a2c9fe4d086301a3821d7fb93a7158341',1,'render.c']]],
   ['reset_5fmusic',['reset_music',['../nes__hw__functionalities_8h.html#ab6488ae01aa85f1891d0d06fa6164fd2',1,'nes_hw_functionalities.h']]]
 ];
