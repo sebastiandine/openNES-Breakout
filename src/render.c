@@ -125,14 +125,10 @@ void render_score(void){
 
     PPU_ADDRESS = MSB(0x2049);
     PPU_ADDRESS = LSB(0x2049);
+
     PPU_DATA = player.score_digit1;
-
-    PPU_ADDRESS = MSB(0x204A);
-    PPU_ADDRESS = LSB(0x204A);
-    PPU_DATA = player.score_digit2;
-
-    PPU_ADDRESS = MSB(0x204B);
-    PPU_ADDRESS = LSB(0x204B);
+    PPU_DATA = player.score_digit2; /* since PPU_ADDRESS increases after each PPU_DATA write, we do not need
+                                     * to set it again if we want to write to continous bg tiles */
     PPU_DATA = player.score_digit3;
     ppu_reset_scroll();
 }

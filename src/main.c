@@ -58,7 +58,12 @@ void main(void){
             player.lives = 4;
             player.speed = 4;
 
+            ppu_turn_all_off();
             render_ingame();
+
+            memcpy(bg_collision_map, ingame_collisionmap, 192); /* load collision map to special memory section for
+                                                                 * collision map */
+            ppu_turn_all_on();
 
             /* --- INGAME LOOP --- */
             while (flag_ingame) {

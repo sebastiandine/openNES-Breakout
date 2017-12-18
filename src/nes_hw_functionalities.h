@@ -261,8 +261,17 @@ void ppu_draw_background(const unsigned char *bg, unsigned char nametable);
  * @param col_map Collision map. Make sure this is 'unsigned char [256]'.
  */
 void load_background_collision_map(unsigned char *col_map);
-														   
 
+/**
+ * @brief This function loads the given collision map into global array @link bg_collision_map @endlink in section 'MAP',
+ * which will be used for collision calculation.
+ * Remember to call function @link wait_Vblank() @endlink before you turn on the screen again, using function
+ * @link ppu_turn_all_on() @endlink.
+ *
+ * @param col_map Collision map.
+ * @param size Number of elements of the map.
+ */
+void load_background_collision_map_by_size(unsigned char *col_map, unsigned char size);
 
 /**
  * @brief This function reads controller ports and stores the result into globals @link gamepad_1 @endlink

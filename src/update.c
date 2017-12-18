@@ -79,21 +79,21 @@ void collision_check_ball_playfield(void){
  */
 unsigned char collision_check_ball_brick(void){
 
-    if(ball.pos_y < 111){ //ball is one bg line before first line of bricks
+    if(ball.pos_y < 111 && ball.pos_y > 48){ //ball is one bg line before first line of bricks
 
         /* get tile in collision map */
         collision_addr = MAPARRAY_ADR(ball.pos_x, (ball.pos_y - ball.speed)) - 0xC0; /* convert bg tile address to collision map tile address.
                                                                                       * - 0xC0 since the collision map starts
                                                                                        at bg tile 0xE0 */
-        collision_tile = ingame_collisionmap[collision_addr];
+        collision_tile = bg_collision_map[collision_addr];
 
         if(collision_tile == 0x61){
             ++player.score;
             ball.dir = DOWN;
 
             /* update collision map */
-            ingame_collisionmap[collision_addr] = 0x00;
-            ingame_collisionmap[collision_addr +1] = 0x00;
+            bg_collision_map[collision_addr] = 0x00;
+            bg_collision_map[collision_addr +1] = 0x00;
 
             /* calculate bg tiles, which need to be rendered with blank tiles */
             brick_hit.tile_left = collision_addr - 0x20; //convert collision map tile address to bg-tile address
@@ -106,8 +106,8 @@ unsigned char collision_check_ball_brick(void){
             ++player.score;
 
             /* update collision map */
-            ingame_collisionmap[collision_addr] = 0x00;
-            ingame_collisionmap[collision_addr -1] = 0x00;
+            bg_collision_map[collision_addr] = 0x00;
+            bg_collision_map[collision_addr -1] = 0x00;
 
             /* calculate bg tiles, which need to be rendered with blank tiles */
             brick_hit.tile_right = collision_addr - 0x20; //convert collision map tile address to bg-tile address
