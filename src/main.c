@@ -56,7 +56,7 @@ void main(void){
             player.score_digit2 = 0;
             player.score_digit3 = 0;
             player.lives = 4;
-            player.speed = 4;
+            player.speed = 6;
 
             ppu_turn_all_off();
             render_ingame();
@@ -68,8 +68,9 @@ void main(void){
             /* --- INGAME LOOP --- */
             while (flag_ingame) {
                 /* init ball */
-                ball.pos_x = 135;
+                ball.pos_x = 70;
                 ball.pos_y = 150;
+                ball.angle = MID;
                 ball.speed = 1;
                 ball.dir = DOWN;
                 ball.angle_dir = LEFT;

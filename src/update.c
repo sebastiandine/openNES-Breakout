@@ -233,6 +233,7 @@ void collision_check_ball_player(void){
             /* maximum angle and direction inversion */
             if(ball.pos_x < (player.pos_x - 5)){
                 ball.angle = MAX;
+
                 if(ball.angle_dir == LEFT){
                     ball.angle_dir == RIGHT;
                 }
@@ -242,7 +243,9 @@ void collision_check_ball_player(void){
                 return;
             }
             if(ball.pos_x > (player.pos_x + 21)){
-                ball.angle_dir = MAX;
+                ball.angle = MAX;
+
+
                 if(ball.angle_dir == LEFT){
                     ball.angle_dir == RIGHT;
                 }

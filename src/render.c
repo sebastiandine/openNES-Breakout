@@ -69,6 +69,14 @@ void render_gameover(void) {
     ppu_clear_oam();
     ppu_turn_all_off();
     ppu_draw_background(game_over, 'a');
+
+    PPU_ADDRESS = MSB(0x2191);
+    PPU_ADDRESS = LSB(0x2191);
+    PPU_DATA = player.score_digit1;
+    PPU_DATA = player.score_digit2;         /* since PPU_ADDRESS increases after each PPU_DATA write, we do not need
+                                            * to set it again if we want to write to continous bg tiles */
+    PPU_DATA = player.score_digit3;
+
     wait_Vblank();
     ppu_turn_all_on();
     ppu_reset_scroll();
@@ -132,7 +140,6 @@ void render_score(void){
     PPU_DATA = player.score_digit3;
     ppu_reset_scroll();
 }
-
 
 /**
  * @brief This function orchestrates all rendering functions and encapsulates them to the main loop.
