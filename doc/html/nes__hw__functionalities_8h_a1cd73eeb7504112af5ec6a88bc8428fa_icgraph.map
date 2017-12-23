@@ -1,6 +1,7 @@
 <map id="ppu_turn_all_on" name="ppu_turn_all_on">
-<area shape="rect" id="node2" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="335,53,385,80"/>
-<area shape="rect" id="node3" href="$render_8c.html#a465a524120f35a3553c30816a946afeb" title="This function renders the ingame background resp. playfield. " alt="" coords="173,28,280,55"/>
-<area shape="rect" id="node4" href="$render_8c.html#ae26ba349763926ea58e48309a65af815" title="This function renders the menu background. " alt="" coords="178,79,275,105"/>
-<area shape="rect" id="node5" href="$render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="167,129,287,156"/>
+<area shape="rect" id="node2" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="335,82,385,109"/>
+<area shape="rect" id="node3" href="$render_8c.html#a465a524120f35a3553c30816a946afeb" title="This function renders the ingame background resp. playfield. " alt="" coords="173,32,280,58"/>
+<area shape="rect" id="node4" href="$render_8c.html#ae26ba349763926ea58e48309a65af815" title="This function renders the menu background. " alt="" coords="178,82,275,109"/>
+<area shape="rect" id="node5" href="$render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d" title="render_credits" alt="" coords="175,133,279,160"/>
+<area shape="rect" id="node6" href="$render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="167,184,287,210"/>
 </map>

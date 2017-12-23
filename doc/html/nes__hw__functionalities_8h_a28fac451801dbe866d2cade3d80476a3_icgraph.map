@@ -1,3 +1,4 @@
 <map id="ppu_load_bg_palette" name="ppu_load_bg_palette">
-<area shape="rect" id="node2" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="195,5,245,32"/>
+<area shape="rect" id="node2" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="347,5,397,32"/>
+<area shape="rect" id="node3" href="$render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d" title="render_credits" alt="" coords="195,31,299,57"/>
 </map>

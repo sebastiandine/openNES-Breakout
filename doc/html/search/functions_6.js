@@ -2,6 +2,7 @@ var searchData=
 [
   ['render_5fball',['render_ball',['../render_8c.html#a5240636f9b79ed7294e04a004f4c881e',1,'render.c']]],
   ['render_5fbrickhit',['render_brickhit',['../render_8c.html#acf188627826f1d99d08e3b2b38f7045b',1,'render.c']]],
+  ['render_5fcredits',['render_credits',['../render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d',1,'render.c']]],
   ['render_5fgameover',['render_gameover',['../render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73',1,'render.c']]],
   ['render_5fingame',['render_ingame',['../render_8c.html#a465a524120f35a3553c30816a946afeb',1,'render.c']]],
   ['render_5flives',['render_lives',['../render_8c.html#ae4ca40a0e1b217d816247eed064cd1dc',1,'render.c']]],

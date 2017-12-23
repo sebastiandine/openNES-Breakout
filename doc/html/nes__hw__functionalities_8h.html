@@ -194,6 +194,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a3b0640509d7e01bf4f82a8473fbbe139"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nes__hw__functionalities_8h.html#a3b0640509d7e01bf4f82a8473fbbe139">load_background_collision_map</a> (unsigned char *col_map)</td></tr>
 <tr class="memdesc:a3b0640509d7e01bf4f82a8473fbbe139"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function loads the given collision map into global array <a class="el" href="nes__hw__functionalities_8h.html#a8676935a08a5d7cf2cecc8d806b29b6e">bg_collision_map</a> in section 'MAP', which will be used for collision calculation. Remember to call function <a class="el" href="nes__hw__functionalities_8h.html#a2dd34400e4601ecff26c9f5882c4cf3c">wait_Vblank()</a> before you turn on the screen again, using function <a class="el" href="nes__hw__functionalities_8c.html#a1cd73eeb7504112af5ec6a88bc8428fa">ppu_turn_all_on()</a>.  <a href="#a3b0640509d7e01bf4f82a8473fbbe139">More...</a><br /></td></tr>
 <tr class="separator:a3b0640509d7e01bf4f82a8473fbbe139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc75d06bca11716fb0fea2ed5b74cc39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nes__hw__functionalities_8h.html#acc75d06bca11716fb0fea2ed5b74cc39">load_background_collision_map_by_size</a> (unsigned char *col_map, unsigned char size)</td></tr>
+<tr class="memdesc:acc75d06bca11716fb0fea2ed5b74cc39"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function loads the given collision map into global array <a class="el" href="nes__hw__functionalities_8h.html#a8676935a08a5d7cf2cecc8d806b29b6e">bg_collision_map</a> in section 'MAP', which will be used for collision calculation. Remember to call function <a class="el" href="nes__hw__functionalities_8h.html#a2dd34400e4601ecff26c9f5882c4cf3c">wait_Vblank()</a> before you turn on the screen again, using function <a class="el" href="nes__hw__functionalities_8c.html#a1cd73eeb7504112af5ec6a88bc8428fa">ppu_turn_all_on()</a>.  <a href="#acc75d06bca11716fb0fea2ed5b74cc39">More...</a><br /></td></tr>
+<tr class="separator:acc75d06bca11716fb0fea2ed5b74cc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cfb1ded0707337c2fc5b5d31bf8078e"><td class="memItemLeft" align="right" valign="top">void __fastcall__&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nes__hw__functionalities_8h.html#a4cfb1ded0707337c2fc5b5d31bf8078e">get_controller_input</a> (void)</td></tr>
 <tr class="memdesc:a4cfb1ded0707337c2fc5b5d31bf8078e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function reads controller ports and stores the result into globals <a class="el" href="nes__hw__functionalities_8h.html#a8285b7effb12ece2ab49970350288760">gamepad_1</a> and <a class="el" href="nes__hw__functionalities_8h.html#ac63acc1e4a43f737204a8ec1fa7a91ad">gamepad_2</a> . Use button mask macros to determine, whether a certain button has been pressed. Example:  <a href="#a4cfb1ded0707337c2fc5b5d31bf8078e">More...</a><br /></td></tr>
 <tr class="separator:a4cfb1ded0707337c2fc5b5d31bf8078e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -723,6 +726,43 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="acc75d06bca11716fb0fea2ed5b74cc39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc75d06bca11716fb0fea2ed5b74cc39">&#9670;&nbsp;</a></span>load_background_collision_map_by_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void load_background_collision_map_by_size </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>col_map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function loads the given collision map into global array <a class="el" href="nes__hw__functionalities_8h.html#a8676935a08a5d7cf2cecc8d806b29b6e">bg_collision_map</a> in section 'MAP', which will be used for collision calculation. Remember to call function <a class="el" href="nes__hw__functionalities_8h.html#a2dd34400e4601ecff26c9f5882c4cf3c">wait_Vblank()</a> before you turn on the screen again, using function <a class="el" href="nes__hw__functionalities_8c.html#a1cd73eeb7504112af5ec6a88bc8428fa">ppu_turn_all_on()</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">col_map</td><td>Collision map. </td></tr>
+    <tr><td class="paramname">size</td><td>Number of elements of the map. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a3d38c0d50bdfde3f95c5a66e9ed68af7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d38c0d50bdfde3f95c5a66e9ed68af7">&#9670;&nbsp;</a></span>memcpy()</h2>
 
@@ -769,7 +809,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="nes__hw__functionalities_8h_a3d38c0d50bdfde3f95c5a66e9ed68af7_icgraph.png" border="0" usemap="#nes__hw__functionalities_8h_a3d38c0d50bdfde3f95c5a66e9ed68af7_icgraph" alt=""/></div>
 <map name="nes__hw__functionalities_8h_a3d38c0d50bdfde3f95c5a66e9ed68af7_icgraph" id="nes__hw__functionalities_8h_a3d38c0d50bdfde3f95c5a66e9ed68af7_icgraph">
-<area shape="rect" id="node2" href="nes__hw__functionalities_8h.html#a3b0640509d7e01bf4f82a8473fbbe139" title="This function loads the given collision map into global array bg_collision_map in section &#39;MAP&#39;..." alt="" coords="125,5,332,32"/>
+<area shape="rect" id="node2" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="203,5,254,32"/>
+<area shape="rect" id="node3" href="nes__hw__functionalities_8h.html#a3b0640509d7e01bf4f82a8473fbbe139" title="This function loads the given collision map into global array bg_collision_map in section &#39;MAP&#39;..." alt="" coords="125,56,332,83"/>
 </map>
 </div>
 
@@ -895,8 +936,9 @@ Here is the caller graph for this function:</div>
 <map name="nes__hw__functionalities_8h_aa16e9176ee0d40dc88d3c9da14f6feb8_icgraph" id="nes__hw__functionalities_8h_aa16e9176ee0d40dc88d3c9da14f6feb8_icgraph">
 <area shape="rect" id="node2" href="render_8c.html#a465a524120f35a3553c30816a946afeb" title="This function renders the ingame background resp. playfield. " alt="" coords="211,5,317,32"/>
 <area shape="rect" id="node4" href="render_8c.html#ae26ba349763926ea58e48309a65af815" title="This function renders the menu background. " alt="" coords="215,56,313,83"/>
-<area shape="rect" id="node5" href="render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="204,107,324,133"/>
-<area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="372,56,423,83"/>
+<area shape="rect" id="node5" href="render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d" title="render_credits" alt="" coords="212,107,316,133"/>
+<area shape="rect" id="node6" href="render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="204,157,324,184"/>
+<area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="372,81,423,108"/>
 </map>
 </div>
 
@@ -924,7 +966,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="nes__hw__functionalities_8h_a28fac451801dbe866d2cade3d80476a3_icgraph.png" border="0" usemap="#nes__hw__functionalities_8h_a28fac451801dbe866d2cade3d80476a3_icgraph" alt=""/></div>
 <map name="nes__hw__functionalities_8h_a28fac451801dbe866d2cade3d80476a3_icgraph" id="nes__hw__functionalities_8h_a28fac451801dbe866d2cade3d80476a3_icgraph">
-<area shape="rect" id="node2" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="195,5,245,32"/>
+<area shape="rect" id="node2" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="347,5,397,32"/>
+<area shape="rect" id="node3" href="render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d" title="render_credits" alt="" coords="195,31,299,57"/>
 </map>
 </div>
 
@@ -1050,14 +1093,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="nes__hw__functionalities_8h_a3cbab1c8c825c8dd7e439f25de7ef390_icgraph.png" border="0" usemap="#nes__hw__functionalities_8h_a3cbab1c8c825c8dd7e439f25de7ef390_icgraph" alt=""/></div>
 <map name="nes__hw__functionalities_8h_a3cbab1c8c825c8dd7e439f25de7ef390_icgraph" id="nes__hw__functionalities_8h_a3cbab1c8c825c8dd7e439f25de7ef390_icgraph">
-<area shape="rect" id="node2" href="render_8c.html#a465a524120f35a3553c30816a946afeb" title="This function renders the ingame background resp. playfield. " alt="" coords="332,5,439,32"/>
-<area shape="rect" id="node4" href="render_8c.html#ae26ba349763926ea58e48309a65af815" title="This function renders the menu background. " alt="" coords="337,56,434,83"/>
-<area shape="rect" id="node5" href="render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="325,107,445,133"/>
-<area shape="rect" id="node6" href="render_8c.html#ae4ca40a0e1b217d816247eed064cd1dc" title="This function renders the players lives by disabling corresponding heart tiles. " alt="" coords="179,157,269,184"/>
-<area shape="rect" id="node7" href="render_8c.html#acf188627826f1d99d08e3b2b38f7045b" title="This function disables the brick, that has been git by the ball during the current frame..." alt="" coords="171,208,277,235"/>
-<area shape="rect" id="node9" href="render_8c.html#a2c9fe4d086301a3821d7fb93a7158341" title="This function renders the score of the player. " alt="" coords="175,259,273,285"/>
-<area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="493,107,544,133"/>
-<area shape="rect" id="node8" href="render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="This function orchestrates all rendering functions and encapsulates them to the main loop..." alt="" coords="327,208,444,235"/>
+<area shape="rect" id="node2" href="render_8c.html#a465a524120f35a3553c30816a946afeb" title="This function renders the ingame background resp. playfield. " alt="" coords="344,5,451,32"/>
+<area shape="rect" id="node4" href="render_8c.html#ae26ba349763926ea58e48309a65af815" title="This function renders the menu background. " alt="" coords="349,56,446,83"/>
+<area shape="rect" id="node5" href="render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d" title="render_credits" alt="" coords="345,107,449,133"/>
+<area shape="rect" id="node6" href="render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="171,157,291,184"/>
+<area shape="rect" id="node7" href="render_8c.html#ae4ca40a0e1b217d816247eed064cd1dc" title="This function renders the players lives by disabling corresponding heart tiles. " alt="" coords="185,208,276,235"/>
+<area shape="rect" id="node8" href="render_8c.html#acf188627826f1d99d08e3b2b38f7045b" title="This function disables the brick, that has been git by the ball during the current frame..." alt="" coords="177,259,284,285"/>
+<area shape="rect" id="node10" href="render_8c.html#a2c9fe4d086301a3821d7fb93a7158341" title="This function renders the score of the player. " alt="" coords="182,309,279,336"/>
+<area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="504,132,555,159"/>
+<area shape="rect" id="node9" href="render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="This function orchestrates all rendering functions and encapsulates them to the main loop..." alt="" coords="339,259,456,285"/>
 </map>
 </div>
 
@@ -1085,10 +1129,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="nes__hw__functionalities_8h_a46080c1f251157fa1c74bcf4fe586000_icgraph.png" border="0" usemap="#nes__hw__functionalities_8h_a46080c1f251157fa1c74bcf4fe586000_icgraph" alt=""/></div>
 <map name="nes__hw__functionalities_8h_a46080c1f251157fa1c74bcf4fe586000_icgraph" id="nes__hw__functionalities_8h_a46080c1f251157fa1c74bcf4fe586000_icgraph">
-<area shape="rect" id="node2" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="333,53,384,80"/>
-<area shape="rect" id="node3" href="render_8c.html#a465a524120f35a3553c30816a946afeb" title="This function renders the ingame background resp. playfield. " alt="" coords="172,28,279,55"/>
-<area shape="rect" id="node4" href="render_8c.html#ae26ba349763926ea58e48309a65af815" title="This function renders the menu background. " alt="" coords="177,79,274,105"/>
-<area shape="rect" id="node5" href="render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="165,129,285,156"/>
+<area shape="rect" id="node2" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="333,82,384,109"/>
+<area shape="rect" id="node3" href="render_8c.html#a465a524120f35a3553c30816a946afeb" title="This function renders the ingame background resp. playfield. " alt="" coords="172,32,279,58"/>
+<area shape="rect" id="node4" href="render_8c.html#ae26ba349763926ea58e48309a65af815" title="This function renders the menu background. " alt="" coords="177,82,274,109"/>
+<area shape="rect" id="node5" href="render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d" title="render_credits" alt="" coords="173,133,277,160"/>
+<area shape="rect" id="node6" href="render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="165,184,285,210"/>
 </map>
 </div>
 
@@ -1116,10 +1161,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="nes__hw__functionalities_8h_a1cd73eeb7504112af5ec6a88bc8428fa_icgraph.png" border="0" usemap="#nes__hw__functionalities_8h_a1cd73eeb7504112af5ec6a88bc8428fa_icgraph" alt=""/></div>
 <map name="nes__hw__functionalities_8h_a1cd73eeb7504112af5ec6a88bc8428fa_icgraph" id="nes__hw__functionalities_8h_a1cd73eeb7504112af5ec6a88bc8428fa_icgraph">
-<area shape="rect" id="node2" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="335,53,385,80"/>
-<area shape="rect" id="node3" href="render_8c.html#a465a524120f35a3553c30816a946afeb" title="This function renders the ingame background resp. playfield. " alt="" coords="173,28,280,55"/>
-<area shape="rect" id="node4" href="render_8c.html#ae26ba349763926ea58e48309a65af815" title="This function renders the menu background. " alt="" coords="178,79,275,105"/>
-<area shape="rect" id="node5" href="render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="167,129,287,156"/>
+<area shape="rect" id="node2" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="335,82,385,109"/>
+<area shape="rect" id="node3" href="render_8c.html#a465a524120f35a3553c30816a946afeb" title="This function renders the ingame background resp. playfield. " alt="" coords="173,32,280,58"/>
+<area shape="rect" id="node4" href="render_8c.html#ae26ba349763926ea58e48309a65af815" title="This function renders the menu background. " alt="" coords="178,82,275,109"/>
+<area shape="rect" id="node5" href="render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d" title="render_credits" alt="" coords="175,133,279,160"/>
+<area shape="rect" id="node6" href="render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="167,184,287,210"/>
 </map>
 </div>
 
@@ -1174,7 +1220,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="nes__hw__functionalities_8h_aa48cb068dfda9992f8ce9487815a36dd_icgraph.png" border="0" usemap="#nes__hw__functionalities_8h_aa48cb068dfda9992f8ce9487815a36dd_icgraph" alt=""/></div>
 <map name="nes__hw__functionalities_8h_aa48cb068dfda9992f8ce9487815a36dd_icgraph" id="nes__hw__functionalities_8h_aa48cb068dfda9992f8ce9487815a36dd_icgraph">
-<area shape="rect" id="node2" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="160,5,211,32"/>
+<area shape="rect" id="node2" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="312,5,363,32"/>
+<area shape="rect" id="node3" href="render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d" title="render_credits" alt="" coords="160,31,264,57"/>
 </map>
 </div>
 
@@ -1242,11 +1289,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="nes__hw__functionalities_8h_aaac52cccb61f4b5b82fae92b60085690_icgraph.png" border="0" usemap="#nes__hw__functionalities_8h_aaac52cccb61f4b5b82fae92b60085690_icgraph" alt=""/></div>
 <map name="nes__hw__functionalities_8h_aaac52cccb61f4b5b82fae92b60085690_icgraph" id="nes__hw__functionalities_8h_aaac52cccb61f4b5b82fae92b60085690_icgraph">
-<area shape="rect" id="node2" href="nes__hw__functionalities_8h.html#aa16e9176ee0d40dc88d3c9da14f6feb8" title="This functions stores the griven background array to the given nametable in order to draw it onto the..." alt="" coords="149,56,300,83"/>
+<area shape="rect" id="node2" href="nes__hw__functionalities_8h.html#aa16e9176ee0d40dc88d3c9da14f6feb8" title="This functions stores the griven background array to the given nametable in order to draw it onto the..." alt="" coords="149,81,300,108"/>
 <area shape="rect" id="node3" href="render_8c.html#a465a524120f35a3553c30816a946afeb" title="This function renders the ingame background resp. playfield. " alt="" coords="355,5,461,32"/>
 <area shape="rect" id="node5" href="render_8c.html#ae26ba349763926ea58e48309a65af815" title="This function renders the menu background. " alt="" coords="359,56,457,83"/>
-<area shape="rect" id="node6" href="render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="348,107,468,133"/>
-<area shape="rect" id="node4" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="516,56,567,83"/>
+<area shape="rect" id="node6" href="render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d" title="render_credits" alt="" coords="356,107,460,133"/>
+<area shape="rect" id="node7" href="render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="348,157,468,184"/>
+<area shape="rect" id="node4" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="516,81,567,108"/>
 </map>
 </div>
 
@@ -1324,8 +1372,9 @@ Here is the caller graph for this function:</div>
 <map name="nes__hw__functionalities_8h_a2dd34400e4601ecff26c9f5882c4cf3c_icgraph" id="nes__hw__functionalities_8h_a2dd34400e4601ecff26c9f5882c4cf3c_icgraph">
 <area shape="rect" id="node2" href="render_8c.html#a465a524120f35a3553c30816a946afeb" title="This function renders the ingame background resp. playfield. " alt="" coords="152,5,259,32"/>
 <area shape="rect" id="node4" href="render_8c.html#ae26ba349763926ea58e48309a65af815" title="This function renders the menu background. " alt="" coords="157,56,254,83"/>
-<area shape="rect" id="node5" href="render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="145,107,265,133"/>
-<area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="313,56,364,83"/>
+<area shape="rect" id="node5" href="render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d" title="render_credits" alt="" coords="153,107,257,133"/>
+<area shape="rect" id="node6" href="render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="145,157,265,184"/>
+<area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="313,81,364,108"/>
 </map>
 </div>
 

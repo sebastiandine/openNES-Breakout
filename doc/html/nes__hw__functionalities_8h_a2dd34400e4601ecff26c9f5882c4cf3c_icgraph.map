@@ -1,6 +1,7 @@
 <map id="wait_Vblank" name="wait_Vblank">
 <area shape="rect" id="node2" href="$render_8c.html#a465a524120f35a3553c30816a946afeb" title="This function renders the ingame background resp. playfield. " alt="" coords="152,5,259,32"/>
 <area shape="rect" id="node4" href="$render_8c.html#ae26ba349763926ea58e48309a65af815" title="This function renders the menu background. " alt="" coords="157,56,254,83"/>
-<area shape="rect" id="node5" href="$render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="145,107,265,133"/>
-<area shape="rect" id="node3" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="313,56,364,83"/>
+<area shape="rect" id="node5" href="$render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d" title="render_credits" alt="" coords="153,107,257,133"/>
+<area shape="rect" id="node6" href="$render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="145,157,265,184"/>
+<area shape="rect" id="node3" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="313,81,364,108"/>
 </map>

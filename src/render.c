@@ -7,6 +7,7 @@
 #include "menu.h"
 #include "ingame.h"
 #include "game_over.h"
+#include "credits.h"
 
 /**
 * @brief Sprite constants
@@ -60,6 +61,16 @@ void render_menu(void){
     ppu_turn_all_on();
     ppu_reset_scroll();
 
+}
+
+void render_credits(void){
+    ppu_turn_all_off();
+    set_bg_palette(bg_palette);
+    ppu_load_bg_palette();
+    ppu_draw_background(credits, 'a');
+    wait_Vblank();
+    ppu_turn_all_on();
+    ppu_reset_scroll();
 }
 
 /**

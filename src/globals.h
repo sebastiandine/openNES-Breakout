@@ -47,6 +47,11 @@ unsigned char flag_miss;
 unsigned char flag_brickhit;
 
 /**
+ * @brief This variable controls, how long the credits screen will be displayed.
+ */
+unsigned char credits_loop;
+
+/**
  * @brief This variable represents the games ball with its parameters.
  */
 static struct ball_struct ball;

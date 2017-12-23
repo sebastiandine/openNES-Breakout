@@ -12,9 +12,15 @@
 
 void main(void){
 
+    /* credits loop */
+    credits_loop = 0;
+    render_credits();
+    while(credits_loop < 240){
+        wait_until_nmi();
+        ++credits_loop;
+    }
+
     while(1){
-
-
         /* --- load palettes--- */
         ppu_turn_all_off();
         set_bg_palette(bg_palette);
@@ -23,10 +29,10 @@ void main(void){
         ppu_load_sprite_palette();
         ppu_turn_all_on();
 
-        flag_gameover = 0;
-
         /* --- MENU LOOP --- */
         render_menu();
+
+        flag_gameover = 0;
         while(!flag_gameover) {
             flag_ingame = 0;
 

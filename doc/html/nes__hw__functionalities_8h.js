@@ -26,6 +26,7 @@ var nes__hw__functionalities_8h =
     [ "START", "nes__hw__functionalities_8h.html#a3018c7600b7bb9866400596a56a57af7", null ],
     [ "get_controller_input", "nes__hw__functionalities_8h.html#a4cfb1ded0707337c2fc5b5d31bf8078e", null ],
     [ "load_background_collision_map", "nes__hw__functionalities_8h.html#a3b0640509d7e01bf4f82a8473fbbe139", null ],
+    [ "load_background_collision_map_by_size", "nes__hw__functionalities_8h.html#acc75d06bca11716fb0fea2ed5b74cc39", null ],
     [ "memcpy", "nes__hw__functionalities_8h.html#a3d38c0d50bdfde3f95c5a66e9ed68af7", null ],
     [ "play_music", "nes__hw__functionalities_8h.html#a3dbcf79df7fa03ec1fb990745a030ccd", null ],
     [ "play_soundeffect", "nes__hw__functionalities_8h.html#acab37f2921e3a469ef12d545918ace65", null ],
