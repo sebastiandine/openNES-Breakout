@@ -1,9 +1,11 @@
 <map id="mainloop_update" name="mainloop_update">
-<area shape="rect" id="node2" href="$update_8c.html#aba4374510db17b9eb700fa0e60d4f31d" title="This function calculates the movement of the ball for the next frame. " alt="" coords="197,5,305,32"/>
-<area shape="rect" id="node3" href="$update_8c.html#a17fb642ca8bf0b56a7e847004899dff4" title="This function checks the collision of the ball with the playfield and calculates the resulting moveme..." alt="" coords="181,57,320,98"/>
-<area shape="rect" id="node4" href="$update_8c.html#a308fa1dee76f9353881ef54bd0e2639e" title="This function checks the collision of the ball with the player and calculates the resulting movement ..." alt="" coords="181,122,320,163"/>
-<area shape="rect" id="node5" href="$update_8c.html#af5e3b0e0371590019c488494982c8c57" title="this function calculates the collision between the ball and the bricks. " alt="" coords="181,187,320,229"/>
-<area shape="rect" id="node6" href="$update_8c.html#a2084f0f9d1f642b3118ceb312151acec" title="This function calculates the speed of the balld and the score of the player, corresponding to the bri..." alt="" coords="173,253,328,280"/>
-<area shape="rect" id="node8" href="$update_8c.html#adee033f2a7b05040eec3f974a94537ec" title="This function checks, if the ball moved below the bottom of the playfield. " alt="" coords="178,305,323,346"/>
-<area shape="rect" id="node7" href="$update_8c.html#a0ba288acf1db0a47af07fbe28cc3843e" title="This function calculates the digits of the players score. Since calculating digits (reason modulo opp..." alt="" coords="376,253,499,280"/>
+<area shape="rect" id="node2" href="$nes__hw__functionalities_8h.html#ad8b34c2fe7b42b098cd341ba451b8099" title="update_music" alt="" coords="199,5,302,32"/>
+<area shape="rect" id="node3" href="$update_8c.html#aba4374510db17b9eb700fa0e60d4f31d" title="This function calculates the movement of the ball for the next frame. " alt="" coords="197,56,305,83"/>
+<area shape="rect" id="node4" href="$update_8c.html#ab8229395d8a26193f633f943715e2f09" title="This function checks the collision of the ball with the player and calculates the resulting movement ..." alt="" coords="181,107,320,149"/>
+<area shape="rect" id="node5" href="$nes__hw__functionalities_8h.html#acab37f2921e3a469ef12d545918ace65" title="This function plays the sound effect with the given number in the famitone sfx file, specified in file &#39;config/reset.s&#39; with label &#39;sounds_data&#39;. " alt="" coords="378,240,497,267"/>
+<area shape="rect" id="node6" href="$update_8c.html#aa6ee68248f816052475f9ccad2ccc0e4" title="This function checks the collision of the ball with the playfield and calculates the resulting moveme..." alt="" coords="181,225,320,266"/>
+<area shape="rect" id="node7" href="$update_8c.html#af5e3b0e0371590019c488494982c8c57" title="this function calculates the collision between the ball and the bricks. " alt="" coords="181,290,320,331"/>
+<area shape="rect" id="node8" href="$update_8c.html#a2084f0f9d1f642b3118ceb312151acec" title="This function calculates the speed of the balld and the score of the player, corresponding to the bri..." alt="" coords="173,356,328,383"/>
+<area shape="rect" id="node10" href="$update_8c.html#adee033f2a7b05040eec3f974a94537ec" title="This function checks, if the ball moved below the bottom of the playfield. " alt="" coords="178,407,323,449"/>
+<area shape="rect" id="node9" href="$update_8c.html#a0ba288acf1db0a47af07fbe28cc3843e" title="This function calculates the digits of the players score. Since calculating digits (reason modulo opp..." alt="" coords="376,356,499,383"/>
 </map>

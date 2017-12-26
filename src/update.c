@@ -42,35 +42,40 @@ void ball_movement(void){
 /**
  * @brief This function checks the collision of the ball with the playfield and calculates the
  * resulting movement of the ball in case of a collision.
+ *
+ * @return 1 if the ball hit the edge of a playfield, 0 if not.
  */
-void collision_check_ball_playfield(void){
+unsigned char collision_check_ball_playfield(void){
 
     if(ball.pos_x < playfield.edge_left){
+
         if(ball.angle_dir == LEFT){
             ball.angle_dir = RIGHT;
-            return;
+            return 1;
         }
         else {
             ball.angle_dir = LEFT;
-            return;
+            return 1;
         }
     }
 
     if(ball.pos_x > playfield.edge_right){
         if(ball.angle_dir == LEFT){
             ball.angle_dir = RIGHT;
-            return;
+            return 1;
         }
         else {
             ball.angle_dir = LEFT;
-            return;
+            return 1;
         }
     }
 
     if(ball.pos_y < playfield.edge_top) {
         ball.dir = DOWN;
-        return;
+        return 1;
     }
+
+    return 0;
 }
 
 /**
@@ -140,36 +145,42 @@ void calc_score_digits(void){
 void calc_score_and_speed(void){
 
     if(collision_addr > 1 && collision_addr < 30){
+        play_soundeffect(4);
         ball.speed = 4;
         player.score += 4;
         calc_score_digits();
         return;
     }
     if(collision_addr > 33 && collision_addr < 62){
+        play_soundeffect(3);
         ball.speed = 3;
         player.score += 3;
         calc_score_digits();
         return;
     }
     if(collision_addr > 65 && collision_addr < 94){
+        play_soundeffect(3);
         ball.speed = 3;
         player.score += 3;
         calc_score_digits();
         return;
     }
     if(collision_addr > 97 && collision_addr < 126){
+        play_soundeffect(2);
         ball.speed = 2;
         player.score += 2;
         calc_score_digits();
         return;
     }
     if(collision_addr > 129 && collision_addr < 158){
+        play_soundeffect(2);
         ball.speed = 2;
         player.score += 2;
         calc_score_digits();
         return;
     }
     if(collision_addr > 161 && collision_addr < 190){
+        play_soundeffect(2);
         ball.speed = 1;
         player.score += 1;
         calc_score_digits();
@@ -183,8 +194,10 @@ void calc_score_and_speed(void){
 /**
  * @brief This function checks the collision of the ball with the player and calculates the
  * resulting movement of the ball in case of a collision.
+ *
+ * @return 1 if the ball hit the players paddle, 0 if not.
  */
-void collision_check_ball_player(void){
+unsigned char collision_check_ball_player(void){
     if((ball.pos_y + ball.speed) > (playfield.edge_bottom - 8)) {   /* consider speed to avoid rendering the ball into the player */
                                                                     /* since the paddle is 8 pixels high, the check needs to be done
                                                                        with player_y - 8*/
@@ -207,27 +220,27 @@ void collision_check_ball_player(void){
             /* minimum angle */
             if(ball.pos_x < (player.pos_x + 6) && ball.pos_x > (player.pos_x - 2)){
                 ball.angle = MIN;
-                return;
+                return 1;
             }
             if(ball.pos_x > (player.pos_x + 10) && ball.pos_x < (player.pos_x + 18)){
                 ball.angle = MIN;
-                return;
+                return 1;
             }
 
             /* medium angle */
             if(ball.pos_x < (player.pos_x - 1) && ball.pos_x > (player.pos_x - 6)){
                 ball.angle = MID;
-                return;
+                return 1;
             }
             if(ball.pos_x > (player.pos_x + 17) && ball.pos_x < (player.pos_x + 22)){
                 ball.angle = MID;
-                return;
+                return 1;
             }
 
             /* horizontal */
             if(ball.pos_x > (player.pos_x + 5) && ball.pos_x < (player.pos_x + 11)){
                 ball.angle = HORZ;
-                return;
+                return 1;
             }
 
             /* maximum angle and direction inversion */
@@ -240,7 +253,7 @@ void collision_check_ball_player(void){
                 else{
                     ball.angle_dir == LEFT;
                 }
-                return;
+                return 1;
             }
             if(ball.pos_x > (player.pos_x + 21)){
                 ball.angle = MAX;
@@ -252,10 +265,11 @@ void collision_check_ball_player(void){
                 else{
                     ball.angle_dir == LEFT;
                 }
-                return;
+                return 1;
             }
         }
     }
+    return 0;
 }
 
 /**
@@ -277,12 +291,19 @@ unsigned char collisions_check_ball_bottom(void){
  */
 void mainloop_update(void){
 
+    update_music(); /* update music engine each frame */
+
     if(!flag_pause) {
         /* calculation of ball movement and speed */
         ball_movement();
 
-        collision_check_ball_playfield();
-        collision_check_ball_player();
+        if(collision_check_ball_player()){
+            play_soundeffect(1);
+        }
+
+        if(collision_check_ball_playfield()){
+            play_soundeffect(0);
+        }
 
         flag_brickhit = collision_check_ball_brick();
         if (flag_brickhit) {
@@ -290,6 +311,9 @@ void mainloop_update(void){
         }
 
         flag_miss = collisions_check_ball_bottom();
+        if(flag_miss){
+            play_soundeffect(6);
+        }
     }
 
 }

@@ -56,13 +56,12 @@ void main(void){
             playfield.edge_right = 242;
 
             /* init player */
-            player.pos_x = 125;
             player.score = 0;
             player.score_digit1 = 0;
             player.score_digit2 = 0;
             player.score_digit3 = 0;
             player.lives = 4;
-            player.speed = 6;
+            player.speed = 8;
 
             ppu_turn_all_off();
             render_ingame();
@@ -74,19 +73,21 @@ void main(void){
             /* --- INGAME LOOP --- */
             while (flag_ingame) {
                 /* init ball */
-                ball.pos_x = 70;
-                ball.pos_y = 150;
-                ball.angle = MID;
+                ball.pos_x = 50;
+                ball.pos_y = 120;
+                ball.angle = MIN;
                 ball.speed = 1;
                 ball.dir = DOWN;
-                ball.angle_dir = LEFT;
-                ball.angle = HORZ;
+                ball.angle_dir = RIGHT;
+
+                player.pos_x = 125;
 
                 flag_miss = 0;
-
                 brick_hit.tile_left = 0;
                 brick_hit.tile_right = 0;
                 flag_brickhit = 0;
+
+                reset_music(); /* reset music engine */
 
                 while (!flag_miss) {
                     gamepad1_input_handling();
@@ -98,6 +99,7 @@ void main(void){
 
                 /* --- MISS AND GAME OVER HANDLING --- */
                 if (player.lives == 0) {
+
                     render_gameover();
                     while(!flag_gameover){
                         get_controller_input();

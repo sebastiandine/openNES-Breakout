@@ -49,12 +49,12 @@ typedef struct playfield_struct{
  */
 typedef struct player_struct{
     unsigned char pos_x; /* no y coordinate required */
-    unsigned char score;
     unsigned char score_digit1;
     unsigned char score_digit2;
     unsigned char score_digit3;
     unsigned char lives;
     unsigned char speed;
+    unsigned int score;
 };
 
 /**
