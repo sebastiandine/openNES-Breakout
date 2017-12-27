@@ -47,6 +47,12 @@ unsigned char flag_miss;
 unsigned char flag_brickhit;
 
 /**
+ * @brief This variable counts, how many bricks have been hit. It is used to
+ * determine, when no brick is left and the bulk of bricks needs to be redrawn.
+ */
+unsigned char count_brickhit;
+
+/**
  * @brief This variable controls, how long the credits screen will be displayed.
  */
 unsigned char credits_loop;

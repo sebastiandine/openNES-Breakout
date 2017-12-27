@@ -93,7 +93,6 @@ unsigned char collision_check_ball_brick(void){
         collision_tile = bg_collision_map[collision_addr];
 
         if(collision_tile == 0x61){
-            ++player.score;
             ball.dir = DOWN;
 
             /* update collision map */
@@ -108,7 +107,6 @@ unsigned char collision_check_ball_brick(void){
         }
         if(collision_tile == 0x62){
             ball.dir = DOWN;
-            ++player.score;
 
             /* update collision map */
             bg_collision_map[collision_addr] = 0x00;
@@ -133,7 +131,7 @@ unsigned char collision_check_ball_brick(void){
  */
 void calc_score_digits(void){
 
-    player.score_digit1 = 0x10 + (player.score >> 10);
+    player.score_digit1 = 0x10 + (player.score / 100);
     player.score_digit2 = 0x10 + ((player.score / 10)%10);
     player.score_digit3 = 0x10 + (player.score %10);
 }
@@ -144,31 +142,10 @@ void calc_score_digits(void){
  */
 void calc_score_and_speed(void){
 
-    if(collision_addr > 1 && collision_addr < 30){
-        play_soundeffect(4);
-        ball.speed = 4;
-        player.score += 4;
-        calc_score_digits();
-        return;
-    }
-    if(collision_addr > 33 && collision_addr < 62){
-        play_soundeffect(3);
-        ball.speed = 3;
-        player.score += 3;
-        calc_score_digits();
-        return;
-    }
-    if(collision_addr > 65 && collision_addr < 94){
-        play_soundeffect(3);
-        ball.speed = 3;
-        player.score += 3;
-        calc_score_digits();
-        return;
-    }
-    if(collision_addr > 97 && collision_addr < 126){
+    if(collision_addr > 161 && collision_addr < 190){
         play_soundeffect(2);
-        ball.speed = 2;
-        player.score += 2;
+        ball.speed = 1;
+        player.score += 1;
         calc_score_digits();
         return;
     }
@@ -179,15 +156,35 @@ void calc_score_and_speed(void){
         calc_score_digits();
         return;
     }
-    if(collision_addr > 161 && collision_addr < 190){
+    if(collision_addr > 97 && collision_addr < 126){
         play_soundeffect(2);
-        ball.speed = 1;
-        player.score += 1;
+        ball.speed = 2;
+        player.score += 2;
+        calc_score_digits();
+        return;
+    }
+    if(collision_addr > 65 && collision_addr < 94){
+        play_soundeffect(3);
+        ball.speed = 3;
+        player.score += 3;
+        calc_score_digits();
+        return;
+    }
+    if(collision_addr > 33 && collision_addr < 62){
+        play_soundeffect(3);
+        ball.speed = 3;
+        player.score += 3;
         calc_score_digits();
         return;
     }
 
-
+    if(collision_addr > 1 && collision_addr < 30){
+        play_soundeffect(4);
+        ball.speed = 4;
+        player.score += 4;
+        calc_score_digits();
+        return;
+    }
 }
 
 
@@ -307,6 +304,7 @@ void mainloop_update(void){
 
         flag_brickhit = collision_check_ball_brick();
         if (flag_brickhit) {
+            ++count_brickhit;
             calc_score_and_speed();
         }
 

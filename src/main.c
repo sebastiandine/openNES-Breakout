@@ -56,12 +56,14 @@ void main(void){
             playfield.edge_right = 242;
 
             /* init player */
+            player.lives = 4;
             player.score = 0;
             player.score_digit1 = 0;
             player.score_digit2 = 0;
             player.score_digit3 = 0;
-            player.lives = 4;
             player.speed = 8;
+
+            count_brickhit = 0;
 
             ppu_turn_all_off();
             render_ingame();
@@ -94,15 +96,29 @@ void main(void){
                     mainloop_update();
                     wait_until_nmi();
                     mainloop_render();
+
+                    /* special case: when no brick is left, redraw whole bulk of bricks */
+                    if(count_brickhit == 84){
+                        count_brickhit = 0;
+                        ppu_turn_all_off();
+                        render_ingame();
+
+                        memcpy(bg_collision_map, ingame_collisionmap, 192); /* load collision map to special memory section for
+                                                                 * collision map */
+                        ppu_turn_all_on();
+                    }
                 }
 
 
                 /* --- MISS AND GAME OVER HANDLING --- */
                 if (player.lives == 0) {
-
+                    reset_music();
                     render_gameover();
+                    play_music(0);
                     while(!flag_gameover){
+                        update_music();
                         get_controller_input();
+
                         if (gamepad_1 & START) {
                             if (!(gamepad_1_old & START)) {
                                 flag_gameover = 1;
