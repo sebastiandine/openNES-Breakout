@@ -1,15 +1,18 @@
 var searchData=
 [
-  ['render_2ec',['render.c',['../render_8c.html',1,'']]],
-  ['render_5fball',['render_ball',['../render_8c.html#a5240636f9b79ed7294e04a004f4c881e',1,'render.c']]],
-  ['render_5fbrickhit',['render_brickhit',['../render_8c.html#acf188627826f1d99d08e3b2b38f7045b',1,'render.c']]],
-  ['render_5fcredits',['render_credits',['../render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d',1,'render.c']]],
-  ['render_5fgameover',['render_gameover',['../render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73',1,'render.c']]],
-  ['render_5fingame',['render_ingame',['../render_8c.html#a465a524120f35a3553c30816a946afeb',1,'render.c']]],
-  ['render_5flives',['render_lives',['../render_8c.html#ae4ca40a0e1b217d816247eed064cd1dc',1,'render.c']]],
-  ['render_5fmenu',['render_menu',['../render_8c.html#ae26ba349763926ea58e48309a65af815',1,'render.c']]],
-  ['render_5fpaddle',['render_paddle',['../render_8c.html#aedf8043e119a064c29879897bdf66f50',1,'render.c']]],
-  ['render_5fscore',['render_score',['../render_8c.html#a2c9fe4d086301a3821d7fb93a7158341',1,'render.c']]],
-  ['reset_5fmusic',['reset_music',['../nes__hw__functionalities_8h.html#ab6488ae01aa85f1891d0d06fa6164fd2',1,'nes_hw_functionalities.h']]],
-  ['right',['RIGHT',['../structures_8h.html#ace937d1c5584c13ffd4a13ffeb77c810aec8379af7490bb9eaaf579cf17876f38',1,'structures.h']]]
+  ['score',['score',['../structplayer__struct.html#a9dffb288f0f2281a0b9abbd8efaa5a18',1,'player_struct']]],
+  ['score_5fdigit1',['score_digit1',['../structplayer__struct.html#acce5462db8b26a09606056497a216a98',1,'player_struct']]],
+  ['score_5fdigit2',['score_digit2',['../structplayer__struct.html#a29fcace881cb3c90d7a5db5a8cde9d0f',1,'player_struct']]],
+  ['score_5fdigit3',['score_digit3',['../structplayer__struct.html#a9c5b8043cc2f43d3e5bef63713859453',1,'player_struct']]],
+  ['select',['SELECT',['../nes__hw__functionalities_8h.html#a53dc4af00adc7b3b4d12eafb71596dfc',1,'nes_hw_functionalities.h']]],
+  ['set_5fbg_5fpalette',['set_bg_palette',['../nes__hw__functionalities_8c.html#a31a768f7aeb9886d71fd92381db17f94',1,'set_bg_palette(const unsigned char *new_bg_palette):&#160;nes_hw_functionalities.c'],['../nes__hw__functionalities_8h.html#aa48cb068dfda9992f8ce9487815a36dd',1,'set_bg_palette(const unsigned char *bg_palette):&#160;nes_hw_functionalities.c']]],
+  ['set_5fsprite_5fpalette',['set_sprite_palette',['../nes__hw__functionalities_8c.html#a9073731ddd16622334e5a3a53ef8ff96',1,'set_sprite_palette(const unsigned char *new_sprite_palette):&#160;nes_hw_functionalities.c'],['../nes__hw__functionalities_8h.html#ad2526e9fbf2f02942a0cc7270aad0057',1,'set_sprite_palette(const unsigned char *sprite_palette):&#160;nes_hw_functionalities.c']]],
+  ['speed',['speed',['../structball__struct.html#aa4eab0a1ec935e4bbdf16be9c7963f3c',1,'ball_struct::speed()'],['../structplayer__struct.html#aa4eab0a1ec935e4bbdf16be9c7963f3c',1,'player_struct::speed()']]],
+  ['spr_5fball',['SPR_BALL',['../macros_8h.html#acdfefa0130ecb24f4fa19d5e3a482964',1,'macros.h']]],
+  ['spr_5fpaddle_5fedge',['SPR_PADDLE_EDGE',['../macros_8h.html#a15d566538a8ca7a8520cd5c7bb518721',1,'macros.h']]],
+  ['spr_5fpaddle_5fmid',['SPR_PADDLE_MID',['../macros_8h.html#a37adaac8c8838de932bd55bb24cb5bab',1,'macros.h']]],
+  ['sprite_5fattr',['SPRITE_ATTR',['../nes__hw__functionalities_8h.html#ab9b8471c6f5e12332c17c27d06467647',1,'nes_hw_functionalities.h']]],
+  ['sprite_5fpalette',['sprite_palette',['../globals_8h.html#af23796a848cd6907595256509d429963',1,'globals.h']]],
+  ['start',['START',['../nes__hw__functionalities_8h.html#a3018c7600b7bb9866400596a56a57af7',1,'nes_hw_functionalities.h']]],
+  ['structures_2eh',['structures.h',['../structures_8h.html',1,'']]]
 ];

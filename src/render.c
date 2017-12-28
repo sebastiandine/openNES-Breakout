@@ -9,27 +9,17 @@
 #include "game_over.h"
 #include "credits.h"
 
-/**
-* @brief Sprite constants
-*/
-#define SPR_BALL 0x01
-#define SPR_PADDLE_MID  0x02
-#define SPR_PADDLE_EDGE 0x03
-/**
- * @brief Background tile constants
- */
-#define BG_VOID 0x00
 
 /**
  * @brief This function renders the player's paddle to the screen.
  */
 void render_paddle(void){
 
-    oam_offset = ppu_load_sprite_to_oam(player.pos_x, playfield.edge_bottom, SPR_PADDLE_EDGE, SPRITE_ATTR(0,0,0,0),
+    oam_offset = ppu_load_sprite_to_oam(player.pos_x, PLAYFIELD_BOTTOM, SPR_PADDLE_EDGE, SPRITE_ATTR(0,0,0,0),
                                         oam_offset);
-    oam_offset = ppu_load_sprite_to_oam(player.pos_x+8, playfield.edge_bottom, SPR_PADDLE_MID, SPRITE_ATTR(0,0,0,0),
+    oam_offset = ppu_load_sprite_to_oam(player.pos_x+8, PLAYFIELD_BOTTOM, SPR_PADDLE_MID, SPRITE_ATTR(0,0,0,0),
                                         oam_offset);
-    oam_offset = ppu_load_sprite_to_oam(player.pos_x+16, playfield.edge_bottom, SPR_PADDLE_EDGE, SPRITE_ATTR(0,1,0,0),
+    oam_offset = ppu_load_sprite_to_oam(player.pos_x+16, PLAYFIELD_BOTTOM, SPR_PADDLE_EDGE, SPRITE_ATTR(0,1,0,0),
                                         oam_offset);
 }
 
@@ -45,6 +35,10 @@ void render_ball(void){
  */
 void render_ingame(void){
     ppu_turn_all_off();
+	set_bg_palette(bg_palette);
+    set_sprite_palette(sprite_palette);
+    ppu_load_bg_palette();
+    ppu_load_sprite_palette();
     ppu_draw_background(ingame, 'a');
     wait_Vblank();
     ppu_turn_all_on();
@@ -55,7 +49,9 @@ void render_ingame(void){
  * @brief This function renders the menu background.
  */
 void render_menu(void){
-    ppu_turn_all_off();
+	ppu_turn_all_off();
+    set_bg_palette(bg_palette);
+	ppu_load_bg_palette();
     ppu_draw_background(menu, 'a');
     wait_Vblank();
     ppu_turn_all_on();
@@ -82,17 +78,17 @@ void render_credits(void){
     }
 
     /* fade out effect */
-    while(ppu_bg_palette[3] != 0x0f){  /* while letter color is not black */
+    while(ppu_bg_palette[3] != COLOR_BLACK){ 
 
         wait_until_nmi();
-        if(ppu_bg_palette[3] == 0x2D){
-            ppu_bg_palette[3] = 0x0f;  /* black */
+        if(ppu_bg_palette[3] == COLOR_DARK_GREY){
+            ppu_bg_palette[3] = COLOR_BLACK; 
         }
-        if(ppu_bg_palette[3] == 0x10){
-            ppu_bg_palette[3] = 0x2D;  /* dark grey */
+        if(ppu_bg_palette[3] == COLOR_LIGHT_GREY){
+            ppu_bg_palette[3] = COLOR_DARK_GREY; 
         }
-        if(ppu_bg_palette[3] == 0x30){ /* white */
-            ppu_bg_palette[3] = 0x10;  /* light grey */
+        if(ppu_bg_palette[3] == COLOR_WHITE){ 
+            ppu_bg_palette[3] = COLOR_LIGHT_GREY;
         }
 
         ppu_load_bg_palette();

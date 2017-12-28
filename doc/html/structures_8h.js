@@ -1,7 +1,6 @@
 var structures_8h =
 [
     [ "ball_struct", "structball__struct.html", "structball__struct" ],
-    [ "playfield_struct", "structplayfield__struct.html", "structplayfield__struct" ],
     [ "player_struct", "structplayer__struct.html", "structplayer__struct" ],
     [ "brickhit_struct", "structbrickhit__struct.html", "structbrickhit__struct" ],
     [ "ball_angle", "structures_8h.html#a4a2aa9e109e68c204e4dc6390b7bb10f", [

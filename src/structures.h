@@ -34,17 +34,6 @@ typedef struct ball_struct{
 };
 
 /**
- * @brief This structure represents the volume of the playfield by defining
- * its edges.
- */
-typedef struct playfield_struct{
-    unsigned char edge_top;
-    unsigned char edge_bottom;
-    unsigned char edge_left;
-    unsigned char edge_right;
-};
-
-/**
  * @brief This strucutre represents the player.
  */
 typedef struct player_struct{

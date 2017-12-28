@@ -47,7 +47,7 @@ void ball_movement(void){
  */
 unsigned char collision_check_ball_playfield(void){
 
-    if(ball.pos_x < playfield.edge_left){
+    if(ball.pos_x < PLAYFIELD_LEFT){
 
         if(ball.angle_dir == LEFT){
             ball.angle_dir = RIGHT;
@@ -59,7 +59,7 @@ unsigned char collision_check_ball_playfield(void){
         }
     }
 
-    if(ball.pos_x > playfield.edge_right){
+    if(ball.pos_x > PLAYFIELD_RIGHT){
         if(ball.angle_dir == LEFT){
             ball.angle_dir = RIGHT;
             return 1;
@@ -70,7 +70,7 @@ unsigned char collision_check_ball_playfield(void){
         }
     }
 
-    if(ball.pos_y < playfield.edge_top) {
+    if(ball.pos_y < PLAYFIELD_TOP) {
         ball.dir = DOWN;
         return 1;
     }
@@ -92,12 +92,12 @@ unsigned char collision_check_ball_brick(void){
                                                                                        at bg tile 0xE0 */
         collision_tile = bg_collision_map[collision_addr];
 
-        if(collision_tile == 0x61){
+        if(collision_tile == BG_BRICK_LEFT){
             ball.dir = DOWN;
 
             /* update collision map */
-            bg_collision_map[collision_addr] = 0x00;
-            bg_collision_map[collision_addr +1] = 0x00;
+            bg_collision_map[collision_addr] = BG_VOID;
+            bg_collision_map[collision_addr +1] = BG_VOID;
 
             /* calculate bg tiles, which need to be rendered with blank tiles */
             brick_hit.tile_left = collision_addr - 0x20; //convert collision map tile address to bg-tile address
@@ -105,12 +105,12 @@ unsigned char collision_check_ball_brick(void){
 
             return 1;
         }
-        if(collision_tile == 0x62){
+        if(collision_tile == BG_BRICK_RIGHT){
             ball.dir = DOWN;
 
             /* update collision map */
-            bg_collision_map[collision_addr] = 0x00;
-            bg_collision_map[collision_addr -1] = 0x00;
+            bg_collision_map[collision_addr] = BG_VOID;
+            bg_collision_map[collision_addr -1] = BG_VOID;
 
             /* calculate bg tiles, which need to be rendered with blank tiles */
             brick_hit.tile_right = collision_addr - 0x20; //convert collision map tile address to bg-tile address
@@ -131,9 +131,9 @@ unsigned char collision_check_ball_brick(void){
  */
 void calc_score_digits(void){
 
-    player.score_digit1 = 0x10 + (player.score / 100);
-    player.score_digit2 = 0x10 + ((player.score / 10)%10);
-    player.score_digit3 = 0x10 + (player.score %10);
+    player.score_digit1 = BG_NUM_ZERO + (player.score / 100);
+    player.score_digit2 = BG_NUM_ZERO + ((player.score / 10)%10);
+    player.score_digit3 = BG_NUM_ZERO + (player.score %10);
 }
 
 /**
@@ -195,7 +195,7 @@ void calc_score_and_speed(void){
  * @return 1 if the ball hit the players paddle, 0 if not.
  */
 unsigned char collision_check_ball_player(void){
-    if((ball.pos_y + ball.speed) > (playfield.edge_bottom - 8)) {   /* consider speed to avoid rendering the ball into the player */
+    if((ball.pos_y + ball.speed) > (PLAYFIELD_BOTTOM - 8)) {   		/* consider speed to avoid rendering the ball into the player */
                                                                     /* since the paddle is 8 pixels high, the check needs to be done
                                                                        with player_y - 8*/
         if (ball.pos_x > (player.pos_x - 8) && ball.pos_x < (player.pos_x + 24)) { /* range of paddle is ]player_x-8; player_x + 24[ */
@@ -274,7 +274,7 @@ unsigned char collision_check_ball_player(void){
  * @return 1 if the ball left the playfield, 0 if not.
  */
 unsigned char collisions_check_ball_bottom(void){
-    if(ball.pos_y > playfield.edge_bottom){
+    if(ball.pos_y > PLAYFIELD_BOTTOM){
         return 1;
     }
     else{

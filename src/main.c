@@ -5,6 +5,7 @@
 #include "nes_hw_functionalities.c"
 
 #include "structures.h"
+#include "macros.h"
 #include "globals.h"
 #include "input.c"
 #include "update.c"
@@ -16,14 +17,6 @@ void main(void){
     render_credits();
 
     while(1){
-        /* --- load palettes--- */
-        ppu_turn_all_off();
-        set_bg_palette(bg_palette);
-        set_sprite_palette(sprite_palette);
-        ppu_load_bg_palette();
-        ppu_load_sprite_palette();
-        ppu_turn_all_on();
-
         /* --- MENU LOOP --- */
         render_menu();
 
@@ -44,12 +37,6 @@ void main(void){
             /* --- INIT INGAME VARIABLES --- */
             flag_pause = 0;
 
-            /* init playfield */
-            playfield.edge_top = 32;
-            playfield.edge_bottom = 200;
-            playfield.edge_left = 5;
-            playfield.edge_right = 242;
-
             /* init player */
             player.lives = 4;
             player.score = 0;
@@ -60,6 +47,7 @@ void main(void){
 
             count_brickhit = 0;
 
+			/* render ingame */
             ppu_turn_all_off();
             render_ingame();
 
@@ -95,6 +83,14 @@ void main(void){
                     /* special case: when no brick is left, redraw whole bulk of bricks */
                     if(count_brickhit == 84){
                         count_brickhit = 0;
+						
+						ball.pos_x = 50;
+						ball.pos_y = 120;
+						ball.angle = MIN;
+						ball.speed = 1;
+						ball.dir = DOWN;
+						ball.angle_dir = RIGHT;
+						
                         ppu_turn_all_off();
                         render_ingame();
 

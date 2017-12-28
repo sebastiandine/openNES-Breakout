@@ -63,11 +63,6 @@ unsigned char credits_loop;
 static struct ball_struct ball;
 
 /**
- * @brief This variable represents the volume of the playfield.
- */
-static struct playfield_struct playfield;
-
-/**
  * @brief This variable represents the player.
  */
 static struct player_struct player;

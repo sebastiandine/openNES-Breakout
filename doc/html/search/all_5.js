@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['flag_5fbrickhit',['flag_brickhit',['../globals_8h.html#af2776f86b1c632197498c5a097d63fc6',1,'globals.h']]],
-  ['flag_5fgameover',['flag_gameover',['../globals_8h.html#a88231356a7a0b402116a0c6840c372ee',1,'globals.h']]],
-  ['flag_5fingame',['flag_ingame',['../globals_8h.html#a4d1f02bb27f450e827b6629243dfb53b',1,'globals.h']]],
-  ['flag_5fmiss',['flag_miss',['../globals_8h.html#a36d418e12f2555d9a0106113ad70274a',1,'globals.h']]],
-  ['flag_5fpause',['flag_pause',['../globals_8h.html#a55ee706f6d79bc818cb968bea99ae1b2',1,'globals.h']]],
-  ['frm_5fcount',['frm_count',['../nes__hw__functionalities_8h.html#a3cf8c20a6e3ae7b8754fc251433d8950',1,'nes_hw_functionalities.h']]]
+  ['gamepad1_5finput_5fhandling',['gamepad1_input_handling',['../input_8c.html#a4e14484dd443365f11eff48e4c7d3bbd',1,'input.c']]],
+  ['gamepad_5f1',['gamepad_1',['../nes__hw__functionalities_8h.html#a8285b7effb12ece2ab49970350288760',1,'nes_hw_functionalities.h']]],
+  ['gamepad_5f1_5fold',['gamepad_1_old',['../nes__hw__functionalities_8h.html#a4b95e3b39d25a63deb8e53276d584955',1,'nes_hw_functionalities.h']]],
+  ['gamepad_5f1_5ftest',['gamepad_1_test',['../nes__hw__functionalities_8h.html#a7ab1d5584f1fcc61db4ce1639bbfa24e',1,'nes_hw_functionalities.h']]],
+  ['gamepad_5f2',['gamepad_2',['../nes__hw__functionalities_8h.html#ac63acc1e4a43f737204a8ec1fa7a91ad',1,'nes_hw_functionalities.h']]],
+  ['gamepad_5f2_5fold',['gamepad_2_old',['../nes__hw__functionalities_8h.html#a88539f31950c380f242acf02854845aa',1,'nes_hw_functionalities.h']]],
+  ['gamepad_5f2_5ftest',['gamepad_2_test',['../nes__hw__functionalities_8h.html#a576240ea874939fe615c81c341cb47de',1,'nes_hw_functionalities.h']]],
+  ['get_5fcontroller_5finput',['get_controller_input',['../nes__hw__functionalities_8h.html#a4cfb1ded0707337c2fc5b5d31bf8078e',1,'nes_hw_functionalities.h']]],
+  ['globals_2eh',['globals.h',['../globals_8h.html',1,'']]]
 ];

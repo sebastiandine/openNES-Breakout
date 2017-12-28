@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lives',['lives',['../structplayer__struct.html#a8d8c91775e55f076beec4f598db3ae1e',1,'player_struct']]]
+  ['nmi_5fflag',['nmi_flag',['../nes__hw__functionalities_8h.html#ab8b8dca4a981215f764d8fa3a5da7130',1,'nes_hw_functionalities.h']]]
 ];
