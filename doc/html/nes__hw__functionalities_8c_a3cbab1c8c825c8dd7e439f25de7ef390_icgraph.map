@@ -1,7 +1,7 @@
 <map id="ppu_reset_scroll" name="ppu_reset_scroll">
 <area shape="rect" id="node2" href="$render_8c.html#a465a524120f35a3553c30816a946afeb" title="This function renders the ingame background resp. playfield. " alt="" coords="344,5,451,32"/>
 <area shape="rect" id="node4" href="$render_8c.html#ae26ba349763926ea58e48309a65af815" title="This function renders the menu background. " alt="" coords="349,56,446,83"/>
-<area shape="rect" id="node5" href="$render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d" title="render_credits" alt="" coords="345,107,449,133"/>
+<area shape="rect" id="node5" href="$render_8c.html#a3df49a74f80b5b9804f6ae282efb7b7d" title="This function renders the credit screen with a simple fade out effect. " alt="" coords="345,107,449,133"/>
 <area shape="rect" id="node6" href="$render_8c.html#ad685663b0f8d5a90cb73894cf2a6aa73" title="This function renders the game over background. " alt="" coords="171,157,291,184"/>
 <area shape="rect" id="node7" href="$render_8c.html#ae4ca40a0e1b217d816247eed064cd1dc" title="This function renders the players lives by disabling corresponding heart tiles. " alt="" coords="185,208,276,235"/>
 <area shape="rect" id="node8" href="$render_8c.html#acf188627826f1d99d08e3b2b38f7045b" title="This function disables the brick, that has been git by the ball during the current frame..." alt="" coords="177,259,284,285"/>

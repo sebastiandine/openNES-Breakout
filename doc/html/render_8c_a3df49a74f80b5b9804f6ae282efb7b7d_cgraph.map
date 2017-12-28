@@ -6,5 +6,6 @@
 <area shape="rect" id="node7" href="$nes__hw__functionalities_8h.html#a2dd34400e4601ecff26c9f5882c4cf3c" title="wait_Vblank" alt="" coords="187,208,279,235"/>
 <area shape="rect" id="node8" href="$nes__hw__functionalities_8c.html#a1cd73eeb7504112af5ec6a88bc8428fa" title="This function enables background and sprite rendering. " alt="" coords="176,259,289,285"/>
 <area shape="rect" id="node9" href="$nes__hw__functionalities_8c.html#a3cbab1c8c825c8dd7e439f25de7ef390" title="This functions resets scrolling. This needs to be done after every render routine. " alt="" coords="174,309,291,336"/>
+<area shape="rect" id="node10" href="$nes__hw__functionalities_8c.html#a8feece6ffdf403f3d51c0cf5118e5d81" title="This function waits until NMI interrupt is triggered during VBlank (see aöso .NMI section in reset..." alt="" coords="181,360,285,387"/>
 <area shape="rect" id="node6" href="$nes__hw__functionalities_8h.html#aaac52cccb61f4b5b82fae92b60085690" title="This function unpacks an RLE&#45;compressed nametable and stores it to the address, register PPU_ADDRESS ..." alt="" coords="356,157,452,184"/>
 </map>

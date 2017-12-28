@@ -5,6 +5,7 @@ var globals_8h =
     [ "brick_hit", "globals_8h.html#adfd2a88f3f5da5ece56a9ed358b804f6", null ],
     [ "collision_addr", "globals_8h.html#ad2457bc0854591781a18ef90e8e3480c", null ],
     [ "collision_tile", "globals_8h.html#ac4d2aa0f25cdb87d8e3d1f61432119dc", null ],
+    [ "count_brickhit", "globals_8h.html#a6969d498dd9045fe973fc4926c4d0cbe", null ],
     [ "credits_loop", "globals_8h.html#a0cd585e0e32a77c5eaea503ed4321356", null ],
     [ "flag_brickhit", "globals_8h.html#af2776f86b1c632197498c5a097d63fc6", null ],
     [ "flag_gameover", "globals_8h.html#a88231356a7a0b402116a0c6840c372ee", null ],

@@ -13,12 +13,7 @@
 void main(void){
 
     /* credits loop */
-    credits_loop = 0;
     render_credits();
-    while(credits_loop < 240){
-        wait_until_nmi();
-        ++credits_loop;
-    }
 
     while(1){
         /* --- load palettes--- */

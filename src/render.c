@@ -63,7 +63,11 @@ void render_menu(void){
 
 }
 
+/**
+ * @brief This function renders the credit screen with a simple fade out effect.
+ */
 void render_credits(void){
+    /* render screen */
     ppu_turn_all_off();
     set_bg_palette(bg_palette);
     ppu_load_bg_palette();
@@ -71,6 +75,34 @@ void render_credits(void){
     wait_Vblank();
     ppu_turn_all_on();
     ppu_reset_scroll();
+
+    credits_loop = 0;
+    while(++credits_loop < 40){
+        wait_until_nmi();
+    }
+
+    /* fade out effect */
+    while(ppu_bg_palette[3] != 0x0f){  /* while letter color is not black */
+
+        wait_until_nmi();
+        if(ppu_bg_palette[3] == 0x2D){
+            ppu_bg_palette[3] = 0x0f;  /* black */
+        }
+        if(ppu_bg_palette[3] == 0x10){
+            ppu_bg_palette[3] = 0x2D;  /* dark grey */
+        }
+        if(ppu_bg_palette[3] == 0x30){ /* white */
+            ppu_bg_palette[3] = 0x10;  /* light grey */
+        }
+
+        ppu_load_bg_palette();
+        ppu_reset_scroll();
+
+        credits_loop = 0;
+        while(++credits_loop < 40) {
+            wait_until_nmi();
+        }
+    }
 }
 
 /**
