@@ -53,9 +53,9 @@ unsigned char flag_brickhit;
 unsigned char count_brickhit;
 
 /**
- * @brief This variable controls, how long the credits screen will be displayed.
+ * @brief This variable will be used to implement 'sleep' functionalities.
  */
-unsigned char credits_loop;
+unsigned char sleep_loop;
 
 /**
  * @brief This variable represents the games ball with its parameters.

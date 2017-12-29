@@ -12,6 +12,5 @@ var searchData=
   ['color_5fdark_5fgrey',['COLOR_DARK_GREY',['../macros_8h.html#a48b5aa8090b47348dddba1c4d01eb0df',1,'macros.h']]],
   ['color_5flight_5fgrey',['COLOR_LIGHT_GREY',['../macros_8h.html#a3b28e99bd18e8be6e5c2cb26df607f2d',1,'macros.h']]],
   ['color_5fwhite',['COLOR_WHITE',['../macros_8h.html#a9b44987ffdc2af19b635206b94334b69',1,'macros.h']]],
-  ['count_5fbrickhit',['count_brickhit',['../globals_8h.html#a6969d498dd9045fe973fc4926c4d0cbe',1,'globals.h']]],
-  ['credits_5floop',['credits_loop',['../globals_8h.html#a0cd585e0e32a77c5eaea503ed4321356',1,'globals.h']]]
+  ['count_5fbrickhit',['count_brickhit',['../globals_8h.html#a6969d498dd9045fe973fc4926c4d0cbe',1,'globals.h']]]
 ];

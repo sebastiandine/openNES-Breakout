@@ -190,7 +190,7 @@ irq:
 	.include "lib_famitone2.s"
 
 music_data:
-	.include "music.s"
+	;.include "music.s"
 
 sounds_data:
     .include "sfx.s"

@@ -13,9 +13,9 @@
 
 void main(void){
 
-    /* credits loop */
+    /* CREDITS */
     render_credits();
-
+/*-------------------------------------------------------------------------------------*/
     while(1){
         /* --- MENU LOOP --- */
         render_menu();
@@ -33,19 +33,21 @@ void main(void){
                 }
             }
 
-
+/*-------------------------------------------------------------------------------------*/
             /* --- INIT INGAME VARIABLES --- */
             flag_pause = 0;
+            count_brickhit = 0;
 
             /* init player */
             player.lives = 4;
             player.score = 0;
+            player.speed = 8;
+
+            /* init score digits */
             player.score_digit1 = 0;
             player.score_digit2 = 0;
             player.score_digit3 = 0;
-            player.speed = 8;
-
-            count_brickhit = 0;
+            calc_score_digits();
 
 			/* render ingame */
             ppu_turn_all_off();
@@ -100,14 +102,21 @@ void main(void){
                     }
                 }
 
-
+/*-------------------------------------------------------------------------------------*/
                 /* --- MISS AND GAME OVER HANDLING --- */
                 if (player.lives == 0) {
-                    reset_music();
+                    /*--- game over handling */
                     render_gameover();
-                    play_music(0);
-                    while(!flag_gameover){
+
+                    sleep_loop = 0;
+                    play_soundeffect(5);
+                    while(++sleep_loop < 60){  /* wait 60 frames to play the whole game over soundeffect */
                         update_music();
+                        wait_until_nmi();
+                    }
+                    reset_music();
+
+                    while(!flag_gameover){
                         get_controller_input();
 
                         if (gamepad_1 & START) {
@@ -118,6 +127,7 @@ void main(void){
                         }
                     }
                 }
+                    /* simple miss handling */
                 else {
                     --player.lives;
                     wait_until_nmi();

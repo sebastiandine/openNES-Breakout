@@ -72,12 +72,13 @@ void render_credits(void){
     ppu_turn_all_on();
     ppu_reset_scroll();
 
-    credits_loop = 0;
-    while(++credits_loop < 40){
+    /* show initial color for 40 frames */
+    sleep_loop = 0;
+    while(++sleep_loop < 40){
         wait_until_nmi();
     }
 
-    /* fade out effect */
+    /* fade out effect, darken color every 40 frames */
     while(ppu_bg_palette[3] != COLOR_BLACK){ 
 
         wait_until_nmi();
@@ -94,8 +95,8 @@ void render_credits(void){
         ppu_load_bg_palette();
         ppu_reset_scroll();
 
-        credits_loop = 0;
-        while(++credits_loop < 40) {
+        sleep_loop = 0;
+        while(++sleep_loop < 40) {
             wait_until_nmi();
         }
     }

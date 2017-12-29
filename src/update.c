@@ -312,6 +312,7 @@ void mainloop_update(void){
         if(flag_miss){
             play_soundeffect(6);
         }
+
     }
 
 }

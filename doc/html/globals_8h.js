@@ -6,12 +6,12 @@ var globals_8h =
     [ "collision_addr", "globals_8h.html#ad2457bc0854591781a18ef90e8e3480c", null ],
     [ "collision_tile", "globals_8h.html#ac4d2aa0f25cdb87d8e3d1f61432119dc", null ],
     [ "count_brickhit", "globals_8h.html#a6969d498dd9045fe973fc4926c4d0cbe", null ],
-    [ "credits_loop", "globals_8h.html#a0cd585e0e32a77c5eaea503ed4321356", null ],
     [ "flag_brickhit", "globals_8h.html#af2776f86b1c632197498c5a097d63fc6", null ],
     [ "flag_gameover", "globals_8h.html#a88231356a7a0b402116a0c6840c372ee", null ],
     [ "flag_ingame", "globals_8h.html#a4d1f02bb27f450e827b6629243dfb53b", null ],
     [ "flag_miss", "globals_8h.html#a36d418e12f2555d9a0106113ad70274a", null ],
     [ "flag_pause", "globals_8h.html#a55ee706f6d79bc818cb968bea99ae1b2", null ],
     [ "player", "globals_8h.html#a528c8b1346f8d101002aecd3c514029e", null ],
+    [ "sleep_loop", "globals_8h.html#a6b25c2c70047945852aceef160943c98", null ],
     [ "sprite_palette", "globals_8h.html#af23796a848cd6907595256509d429963", null ]
 ];
