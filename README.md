@@ -2,11 +2,7 @@
 ## Rebuilding classic games for the NES as Open Source  
 ![IMG1](breakout1.png) ![IMG2](breakout2.png)
 ## Project Description
-This is the third entry of the openNES project series which aims to rebuild classic video games for the Nintendo 
-Entertainment System as open source projects.
-The purpose of these projects is to get more enthusiastic people into programming for the NES by providing code examples
-and a starting point for making new games from the scratch.
-
+This is the third entry of the openNES project series aimed at recreating classic video games for the Nintendo Entertainment System on an open source basis. The purpose of these projects is to get more enthusiastic people interested in programming for the NES by providing code examples and providing a starting point for developing new games from scratch.
 
 This particular project aims to rebuild the classic game Breakout. The code is loosely based on the [nesdoug tutorial series](https://nesdoug.com/).
 
@@ -17,8 +13,6 @@ This project is licensed under the zlib license. See also the attached [LICENSE]
 
 ## Toolkit
 * [cc65 cross compiler v.2.5](https://github.com/cc65/cc65) - A freeware C compiler for 6502 based systems
-
-* [JetBrains CLion v.2017.1.1](https://www.jetbrains.com/clion/) - a powerful and easy to use IDE for C/C++ programming
 
 * [Tile Molester v.0.16](http://www.romhacking.net/utilities/109/) - A tileset editor, for designing tiles/sprites
 
@@ -38,9 +32,11 @@ This project is licensed under the zlib license. See also the attached [LICENSE]
 
 * [Nerdy Nights tutorial series](http://nintendoage.com/pub/faq/NA/index.html?load=nerdy_nights_out.html) - Even if it is based on introducing you to assembly, this is the classic lecture for understanding the NES architecture for many years.
 
+## How To Build Locally
+To build a `.NES` rom from the project's sources, execute the build script at `build/build.sh` from the `build` directory or the script `build/build.bat` if you are working on Windows. Note that these scripts depend on the cc65 cross compiler, so you need ensure that this is available on your system.
 
-## How-To Built
-To build the software into an .NES rom, you need to have installed cc65 on your local machine in order to run the script `build/build.bat` for Windows based systems. You always find a build of the master-branch at `build/breakout.nes`.
+## Development Container
+This project provides [VS Code Development Container](https://code.visualstudio.com/docs/remote/containers) configuration at `.devcontainer/`. Via this configuration, you automatically have a complete development environment for developing NES games.
 
 ## Notes for Contributors
 Feel free to fork this project and extend its content. If you find bugs, please submit them as issues so we can discuss together how you can fix them. 

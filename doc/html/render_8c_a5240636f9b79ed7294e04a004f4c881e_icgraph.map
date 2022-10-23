@@ -1,4 +1,0 @@
-<map id="render_ball" name="render_ball">
-<area shape="rect" id="node2" href="$render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="This function orchestrates all rendering functions and encapsulates them to the main loop..." alt="" coords="139,5,256,32"/>
-<area shape="rect" id="node3" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="304,5,355,32"/>
-</map>

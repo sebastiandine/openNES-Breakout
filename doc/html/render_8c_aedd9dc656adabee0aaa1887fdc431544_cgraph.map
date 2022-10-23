@@ -1,9 +1,0 @@
-<map id="mainloop_render" name="mainloop_render">
-<area shape="rect" id="node2" href="$nes__hw__functionalities_8c.html#a34c94ebddea4cccf8f46406be1408d84" title="This function clear the whole OAM section of the PPU RAM by writing 0x00 to all spaces. " alt="" coords="171,5,281,32"/>
-<area shape="rect" id="node3" href="$render_8c.html#acf188627826f1d99d08e3b2b38f7045b" title="This function disables the brick, that has been git by the ball during the current frame..." alt="" coords="173,56,279,83"/>
-<area shape="rect" id="node5" href="$render_8c.html#a2c9fe4d086301a3821d7fb93a7158341" title="This function renders the score of the player. " alt="" coords="177,107,275,133"/>
-<area shape="rect" id="node6" href="$render_8c.html#aedf8043e119a064c29879897bdf66f50" title="This function renders the player&#39;s paddle to the screen. " alt="" coords="175,157,277,184"/>
-<area shape="rect" id="node8" href="$render_8c.html#a5240636f9b79ed7294e04a004f4c881e" title="This function renders the ball. " alt="" coords="183,208,269,235"/>
-<area shape="rect" id="node4" href="$nes__hw__functionalities_8c.html#a3cbab1c8c825c8dd7e439f25de7ef390" title="This functions resets scrolling. This needs to be done after every render routine. " alt="" coords="352,95,469,121"/>
-<area shape="rect" id="node7" href="$nes__hw__functionalities_8c.html#a082bf910f629f7285c510addbec262ef" title="This function loads sprite information to the OAM section of PPU RAM. Internally this function loads ..." alt="" coords="329,171,492,197"/>
-</map>
